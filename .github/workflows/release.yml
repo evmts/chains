@@ -16,6 +16,22 @@ jobs:
       id-token: write
 
     steps:
+      - name: Validate NPM Token
+        run: |
+          if [ -z "${{ secrets.NPM_TOKEN }}" ]; then
+            echo "Error: NPM_TOKEN secret is not set"
+            exit 1
+          fi
+
+          # Verify token is valid by checking npm whoami
+          if ! curl -s -H "Authorization: Bearer ${{ secrets.NPM_TOKEN }}" \
+               https://registry.npmjs.org/-/whoami 2>&1 | grep -q username; then
+            echo "Error: NPM_TOKEN is invalid or expired"
+            exit 1
+          fi
+
+          echo "NPM_TOKEN is valid"
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -31,6 +47,18 @@ jobs:
 
       - name: Generate chain constants
         run: bun run generate
+
+      - name: Check for uncommitted changes
+        run: |
+          if ! git diff --quiet; then
+            echo "Error: Generated files have uncommitted changes"
+            echo "The following files were modified during generation:"
+            git diff --name-only
+            echo ""
+            echo "Please commit these changes before creating a release"
+            exit 1
+          fi
+          echo "No uncommitted changes detected"
 
       - name: Run tests
         run: bun test
