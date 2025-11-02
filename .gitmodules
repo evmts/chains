@@ -1,0 +1,3 @@
+[submodule "lib/chainlist"]
+	path = lib/chainlist
+	url = git@github.com:DefiLlama/chainlist.git
