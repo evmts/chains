@@ -472,6 +472,18 @@ async function main() {
   writeFileSync(tsPath, tsCode);
   console.log(`✓ Generated ${tsPath}`);
 
+  console.log("Compiling TypeScript to JavaScript and declarations...");
+  const tscResult = Bun.spawnSync(["bun", "tsc"], {
+    cwd: join(import.meta.dir, ".."),
+    stdout: "inherit",
+    stderr: "inherit",
+  });
+  if (tscResult.exitCode !== 0) {
+    console.error("✗ TypeScript compilation failed");
+    process.exit(1);
+  }
+  console.log(`✓ Generated src/chains.js and src/chains.d.ts`);
+
   console.log("Generating Go code...");
   const goCode = generateGoCode(chains);
   const goPath = join(import.meta.dir, "../src/chains.go");
