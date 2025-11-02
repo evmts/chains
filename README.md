@@ -2,13 +2,18 @@
 
 Blockchain network constants library for Zig and TypeScript, auto-generated from [DefiLlama/chainlist](https://github.com/DefiLlama/chainlist).
 
+## Overview
+
+This repository provides a dual-language library that exposes blockchain chain constants generated from the DefiLlama chainlist submodule. The code generation script (`scripts/generate.ts`) parses the chainlist data and outputs type-safe constants for both Zig and TypeScript/JavaScript environments.
+
 ## Features
 
 - 🔄 Auto-generated from the official DefiLlama chainlist
-- 🦎 Native Zig support
+- 🦎 Native Zig support with static type safety
 - 📦 TypeScript/JavaScript support via Bun
-- 🔍 Type-safe chain lookups
+- 🔍 Type-safe chain lookups by ID
 - 📊 163+ blockchain networks with RPC endpoints, native currencies, and explorers
+- 🎯 Constant exports for every chain ID
 
 ## Installation
 
@@ -96,7 +101,25 @@ exe.root_module.addImport("chains", chains_dep.module("chains"));
 
 ## Development
 
+### Project Structure
+
+```
+chains/
+├── src/
+│   ├── chains.ts       # Generated TypeScript constants
+│   ├── chains.zig      # Generated Zig constants
+│   ├── root.zig        # Zig module entry point
+│   └── main.zig        # Zig example executable
+├── scripts/
+│   └── generate.ts     # Code generation script
+├── lib/
+│   └── chainlist/      # Git submodule (DefiLlama/chainlist)
+└── build.zig           # Zig build configuration
+```
+
 ### Regenerate Chain Constants
+
+The generation process reads from `lib/chainlist/constants/additionalChainRegistry/` and produces type-safe constants for both languages.
 
 Update the chainlist submodule and regenerate:
 
@@ -107,6 +130,11 @@ git submodule update --remote lib/chainlist
 # Regenerate constants
 bun run generate
 ```
+
+This will:
+1. Parse all `chainid-*.js` files from the chainlist submodule
+2. Generate `src/chains.zig` with Zig constants and structs
+3. Generate `src/chains.ts` with TypeScript constants and interfaces
 
 ### Build
 
@@ -134,13 +162,32 @@ Each chain includes:
 
 - **name**: Full chain name
 - **chain**: Short identifier
-- **chainId**: EIP-155 chain ID
-- **networkId**: Network ID
-- **shortName**: Short name
-- **rpc**: Array of RPC endpoints
-- **nativeCurrency**: Native currency details (name, symbol, decimals)
-- **infoURL**: Chain information URL
-- **explorers**: Block explorer URLs
+- **chainId** / **chain_id**: EIP-155 chain ID
+- **networkId** / **network_id**: Network ID
+- **shortName** / **short_name**: Short name
+- **rpc**: Array of RPC endpoints (HTTP/HTTPS URLs)
+- **nativeCurrency** / **native_currency**: Native currency details (name, symbol, decimals)
+- **infoURL** / **info_url**: Chain information URL (optional)
+- **explorers**: Block explorer URLs with names (optional)
+
+### Generated Constants
+
+For each chain, the following constants are generated:
+
+**TypeScript:**
+- `CHAIN_ID_<NAME>`: Chain ID constant (e.g., `CHAIN_ID_FLR_14`)
+- `<name>`: Chain object with all data
+- `allChains`: Array of all chains
+- `chainById`: Record mapping chain IDs to chain objects
+- `getChainById(chainId)`: Lookup function
+
+**Zig:**
+- `CHAIN_ID_<NAME>`: Chain ID constant (e.g., `CHAIN_ID_FLR_14`)
+- `<name>`: Chain struct with all data
+- `<name>_rpcs`: RPC endpoints array
+- `<name>_explorers`: Explorers array (if available)
+- `all_chains`: Array of all chains
+- `getChainById(chain_id)`: Lookup function
 
 ## License
 
