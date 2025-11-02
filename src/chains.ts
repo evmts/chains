@@ -26,171 +26,171 @@ export interface Chain {
 }
 
 // Chain IDs
-export const CHAIN_ID_QUAI_9 = 9;
-export const CHAIN_ID_FLR_14 = 14;
-export const CHAIN_ID_NOMINA_166 = 166;
-export const CHAIN_ID_WATR_MAINNET_192 = 192;
-export const CHAIN_ID_TACCHAIN_239 = 239;
-export const CHAIN_ID_KSS_347 = 347;
-export const CHAIN_ID_AREUM_463 = 463;
-export const CHAIN_ID_LCAI_504 = 504;
-export const CHAIN_ID_SYNDICATE_510 = 510;
-export const CHAIN_ID_CAPY_586 = 586;
-export const CHAIN_ID_JASMY_681 = 681;
-export const CHAIN_ID_UNIOCEAN_684 = 684;
-export const CHAIN_ID_CAPX_TESTNET_756 = 756;
-export const CHAIN_ID_CAPX_757 = 757;
-export const CHAIN_ID_BINARYHOLDINGS_MAINNET_836 = 836;
-export const CHAIN_ID_AMN_870 = 870;
-export const CHAIN_ID_STABLE_988 = 988;
-export const CHAIN_ID_HYPER_EVM_999 = 999;
-export const CHAIN_ID_BDAG_1043 = 1043;
-export const CHAIN_ID_REALCHAIN_1098 = 1098;
-export const CHAIN_ID_ECM_1124 = 1124;
-export const CHAIN_ID_TAKER_1125 = 1125;
-export const CHAIN_ID_INTUITION_MAINNET_1155 = 1155;
-export const CHAIN_ID_FITOCHAIN_1233 = 1233;
-export const CHAIN_ID_VFL_1408 = 1408;
-export const CHAIN_ID_TVFL_1409 = 1409;
-export const CHAIN_ID_INJECTIVE_TESTNET_1439 = 1439;
-export const CHAIN_ID_TREX_1628 = 1628;
-export const CHAIN_ID_INJECTIVE_1776 = 1776;
-export const CHAIN_ID_EPIX_1916 = 1916;
-export const CHAIN_ID_QIEV3_1990 = 1990;
-export const CHAIN_ID_RONIN_2020 = 2020;
-export const CHAIN_ID_EROL_2027 = 2027;
-export const CHAIN_ID_REALCHAINTEST_2098 = 2098;
-export const CHAIN_ID_IBVM_2105 = 2105;
-export const CHAIN_ID_IBVMT_2107 = 2107;
-export const CHAIN_ID_STABLE_2201 = 2201;
-export const CHAIN_ID_MOCA_2288 = 2288;
-export const CHAIN_ID_BESC_2372 = 2372;
-export const CHAIN_ID_SPLD_2691 = 2691;
-export const CHAIN_ID_SPLDT_2692 = 2692;
-export const CHAIN_ID_ALPEN_2892 = 2892;
-export const CHAIN_ID_SVM_3109 = 3109;
-export const CHAIN_ID_HAUST_NETWORK_3864 = 3864;
-export const CHAIN_ID_GAN_4048 = 4048;
-export const CHAIN_ID_HASHFIRE_4227 = 4227;
-export const CHAIN_ID_SC_4509 = 4509;
-export const CHAIN_ID_PRODAO_4936 = 4936;
-export const CHAIN_ID_SOMNIA_5031 = 5031;
-export const CHAIN_ID_MOCAT_5151 = 5151;
-export const CHAIN_ID_YEYING_5432 = 5432;
-export const CHAIN_ID_DUKONG_5887 = 5887;
-export const CHAIN_ID_GROWFITTER_MAINNET_7084 = 7084;
-export const CHAIN_ID_VRCN_7131 = 7131;
-export const CHAIN_ID_CARRCHAIN_7667 = 7667;
-export const CHAIN_ID_PTB_7820 = 7820;
-export const CHAIN_ID_PCN_7890 = 7890;
-export const CHAIN_ID_BMN_8006 = 8006;
-export const CHAIN_ID_LERAX_8125 = 8125;
-export const CHAIN_ID_SVM_TESTNET_8163 = 8163;
-export const CHAIN_ID_FORKNET_8338 = 8338;
-export const CHAIN_ID_ACN_8700 = 8700;
-export const CHAIN_ID_EBC_8721 = 8721;
-export const CHAIN_ID_WARD_8765 = 8765;
-export const CHAIN_ID_TICS_9030 = 9030;
-export const CHAIN_ID_KUB_9601 = 9601;
-export const CHAIN_ID_PLASMA_9745 = 9745;
-export const CHAIN_ID_PLASMA_TESTNET_9746 = 9746;
-export const CHAIN_ID_PLASMA_DEVNET_9747 = 9747;
-export const CHAIN_ID_ETHW_10001 = 10001;
-export const CHAIN_ID_GATELAYER_10088 = 10088;
-export const CHAIN_ID_OZONE_10120 = 10120;
-export const CHAIN_ID_OZONE_10121 = 10121;
-export const CHAIN_ID_MOVA_10323 = 10323;
-export const CHAIN_ID_KUDORA_12000 = 12000;
-export const CHAIN_ID_ELA_12343 = 12343;
-export const CHAIN_ID_LIBERLAND_TESTNET_12865 = 12865;
-export const CHAIN_ID_BRIDGELESS_13441 = 13441;
-export const CHAIN_ID_INTUITION_TESTNET_13579 = 13579;
-export const CHAIN_ID_SONIC_TESTNET_14601 = 14601;
-export const CHAIN_ID_QUAIT_15000 = 15000;
-export const CHAIN_ID__0G_GALILEO_16601 = 16601;
-export const CHAIN_ID__0G_16661 = 16661;
-export const CHAIN_ID_INCENTIV_24101 = 24101;
-export const CHAIN_ID_TCENT_28802 = 28802;
-export const CHAIN_ID_PAIX_32380 = 32380;
-export const CHAIN_ID_ZIL_32769 = 32769;
-export const CHAIN_ID_ZIL_TESTNET_33101 = 33101;
-export const CHAIN_ID_ZQ2_DEVNET_33469 = 33469;
-export const CHAIN_ID_ABCORE_36888 = 36888;
-export const CHAIN_ID_WEICHAIN_37771 = 37771;
-export const CHAIN_ID_ROOTVX_41295 = 41295;
-export const CHAIN_ID_RISA_51014 = 51014;
-export const CHAIN_ID_LAZAI_52924 = 52924;
-export const CHAIN_ID_MOVA_61900 = 61900;
-export const CHAIN_ID_OMACHAIN_TESTNET_66238 = 66238;
-export const CHAIN_ID_CARRCHAIN_76672 = 76672;
-export const CHAIN_ID_ONYX_80888 = 80888;
-export const CHAIN_ID_CODEX_81224 = 81224;
-export const CHAIN_ID_CHILIZ_88888 = 88888;
-export const CHAIN_ID_APAW_90025 = 90025;
-export const CHAIN_ID_WATR_TESTNET_92870 = 92870;
-export const CHAIN_ID_PEPU_97741 = 97741;
-export const CHAIN_ID_CTC_102030 = 102030;
-export const CHAIN_ID_CTCTEST_102031 = 102031;
-export const CHAIN_ID_CTCDEV_102032 = 102032;
-export const CHAIN_ID_MITOSIS_124816 = 124816;
-export const CHAIN_ID_FUEL_SEPOLIA_129514 = 129514;
-export const CHAIN_ID_ARIA_134235 = 134235;
-export const CHAIN_ID_KASPLEX_167012 = 167012;
-export const CHAIN_ID_LIT_175200 = 175200;
-export const CHAIN_ID_HPP_SEPOLIA_181228 = 181228;
-export const CHAIN_ID_GOMCHAIN_MAINNET_190278 = 190278;
-export const CHAIN_ID_HPP_MAINNET_190415 = 190415;
-export const CHAIN_ID_EADX_198724 = 198724;
-export const CHAIN_ID_NOS_200024 = 200024;
-export const CHAIN_ID_PROPULENCE_TESTNET_202500 = 202500;
-export const CHAIN_ID_AUREXT_202506 = 202506;
-export const CHAIN_ID_KASPLEX_202555 = 202555;
-export const CHAIN_ID_JU_202599 = 202599;
-export const CHAIN_ID_JUCHAIN_210000 = 210000;
-export const CHAIN_ID_KLT_220312 = 220312;
-export const CHAIN_ID_SIVZ_MAINNET_222345 = 222345;
-export const CHAIN_ID_MOCAT_222888 = 222888;
-export const CHAIN_ID_CODENEKT_MAINNET_235235 = 235235;
-export const CHAIN_ID_ULALO_MAINNET_237007 = 237007;
-export const CHAIN_ID_KUB_259251 = 259251;
-export const CHAIN_ID_T1_299792 = 299792;
-export const CHAIN_ID_T1T_299892 = 299892;
-export const CHAIN_ID_DCOMM_MAINNET_326663 = 326663;
-export const CHAIN_ID_LAX_333222 = 333222;
-export const CHAIN_ID_MTX_478549 = 478549;
-export const CHAIN_ID_COMMONS_510003 = 510003;
-export const CHAIN_ID_TCROSS_612044 = 612044;
-export const CHAIN_ID_CROSS_612055 = 612055;
-export const CHAIN_ID_GALACTICA_613419 = 613419;
-export const CHAIN_ID_MDX_648529 = 648529;
-export const CHAIN_ID_PHAROS_TESTNET_688688 = 688688;
-export const CHAIN_ID_PHAROS_ATLANTIC_688689 = 688689;
-export const CHAIN_ID_GALACTICA_TESTNET_843843 = 843843;
-export const CHAIN_ID_HAQQ_TESTETHIQ_853211 = 853211;
-export const CHAIN_ID_ROONCHAIN_1314520 = 1314520;
-export const CHAIN_ID_XRPLEVM_1440000 = 1440000;
-export const CHAIN_ID_ETHEREAL_5064014 = 5064014;
-export const CHAIN_ID_LOOT_5151706 = 5151706;
-export const CHAIN_ID_JMDT_7000700 = 7000700;
-export const CHAIN_ID_VPC_8678671 = 8678671;
-export const CHAIN_ID_CELO_SEP_11142220 = 11142220;
-export const CHAIN_ID_ROONCHAIN_13145201 = 13145201;
-export const CHAIN_ID_ETHEREAL_TESTNET_0_13374202 = 13374202;
-export const CHAIN_ID_SIS_13863860 = 13863860;
-export const CHAIN_ID_UNP_47382916 = 47382916;
-export const CHAIN_ID_AUT_65000000 = 65000000;
-export const CHAIN_ID_AUT_BAKERLOO_65010004 = 65010004;
-export const CHAIN_ID_SOVRA_65536001 = 65536001;
-export const CHAIN_ID_ISTCHAIN_MAINNET_286022981 = 286022981;
-export const CHAIN_ID_DNACHAIN_MAINNET_287022981 = 287022981;
-export const CHAIN_ID_SLCCHAIN_MAINNET_288022981 = 288022981;
-export const CHAIN_ID_SOPHON_TESTNET_531050204 = 531050204;
-export const CHAIN_ID_ZEN_845320009 = 845320009;
-export const CHAIN_ID_RARI_1380012617 = 1380012617;
-export const CHAIN_ID_LUMIA_BEAM_TESTNET_2030232745 = 2030232745;
-export const CHAIN_ID_GXY_420420420420 = 420420420420;
+export const CHAIN_ID_QUAI9 = 9;
+export const CHAIN_ID_FLR14 = 14;
+export const CHAIN_ID_NOMINA166 = 166;
+export const CHAIN_ID_WATR_MAINNET192 = 192;
+export const CHAIN_ID_TACCHAIN239 = 239;
+export const CHAIN_ID_KSS347 = 347;
+export const CHAIN_ID_AREUM463 = 463;
+export const CHAIN_ID_LCAI504 = 504;
+export const CHAIN_ID_SYNDICATE510 = 510;
+export const CHAIN_ID_CAPY586 = 586;
+export const CHAIN_ID_JASMY681 = 681;
+export const CHAIN_ID_UNIOCEAN684 = 684;
+export const CHAIN_ID_CAPX_TESTNET756 = 756;
+export const CHAIN_ID_CAPX757 = 757;
+export const CHAIN_ID_BINARYHOLDINGS_MAINNET836 = 836;
+export const CHAIN_ID_A_M_N870 = 870;
+export const CHAIN_ID_STABLE988 = 988;
+export const CHAIN_ID_HYPER_EVM999 = 999;
+export const CHAIN_ID_BDAG1043 = 1043;
+export const CHAIN_ID_REALCHAIN1098 = 1098;
+export const CHAIN_ID_ECM1124 = 1124;
+export const CHAIN_ID_TAKER1125 = 1125;
+export const CHAIN_ID_INTUITION_MAINNET1155 = 1155;
+export const CHAIN_ID_FITOCHAIN1233 = 1233;
+export const CHAIN_ID_VFL1408 = 1408;
+export const CHAIN_ID_TVFL1409 = 1409;
+export const CHAIN_ID_INJECTIVE_TESTNET1439 = 1439;
+export const CHAIN_ID_T_R_E_X1628 = 1628;
+export const CHAIN_ID_INJECTIVE1776 = 1776;
+export const CHAIN_ID_EPIX1916 = 1916;
+export const CHAIN_ID_Q_I_E_V31990 = 1990;
+export const CHAIN_ID_RONIN2020 = 2020;
+export const CHAIN_ID_EROL2027 = 2027;
+export const CHAIN_ID_REALCHAINTEST2098 = 2098;
+export const CHAIN_ID_I_B_V_M2105 = 2105;
+export const CHAIN_ID_I_B_V_M_T2107 = 2107;
+export const CHAIN_ID_STABLE2201 = 2201;
+export const CHAIN_ID_MOCA2288 = 2288;
+export const CHAIN_ID_BESC2372 = 2372;
+export const CHAIN_ID_SPLD2691 = 2691;
+export const CHAIN_ID_SPLDT2692 = 2692;
+export const CHAIN_ID_ALPEN2892 = 2892;
+export const CHAIN_ID_SVM3109 = 3109;
+export const CHAIN_ID_HAUST_NETWORK3864 = 3864;
+export const CHAIN_ID_GAN4048 = 4048;
+export const CHAIN_ID_HASHFIRE4227 = 4227;
+export const CHAIN_ID_S_C4509 = 4509;
+export const CHAIN_ID_PRODAO4936 = 4936;
+export const CHAIN_ID_SOMNIA5031 = 5031;
+export const CHAIN_ID_MOCAT5151 = 5151;
+export const CHAIN_ID_YE_YING5432 = 5432;
+export const CHAIN_ID_DUKONG5887 = 5887;
+export const CHAIN_ID_GROWFITTER_MAINNET7084 = 7084;
+export const CHAIN_ID_VRCN7131 = 7131;
+export const CHAIN_ID_CARRCHAIN7667 = 7667;
+export const CHAIN_ID_PTB7820 = 7820;
+export const CHAIN_ID_PCN7890 = 7890;
+export const CHAIN_ID_BMN8006 = 8006;
+export const CHAIN_ID_LERAX8125 = 8125;
+export const CHAIN_ID_SVM_TESTNET8163 = 8163;
+export const CHAIN_ID_FORKNET8338 = 8338;
+export const CHAIN_ID_A_C_N8700 = 8700;
+export const CHAIN_ID_EBC8721 = 8721;
+export const CHAIN_ID_WARD8765 = 8765;
+export const CHAIN_ID_T_I_C_S9030 = 9030;
+export const CHAIN_ID_KUB9601 = 9601;
+export const CHAIN_ID_PLASMA9745 = 9745;
+export const CHAIN_ID_PLASMA_TESTNET9746 = 9746;
+export const CHAIN_ID_PLASMA_DEVNET9747 = 9747;
+export const CHAIN_ID_ETHW10001 = 10001;
+export const CHAIN_ID_GATE_LAYER10088 = 10088;
+export const CHAIN_ID_OZONE10120 = 10120;
+export const CHAIN_ID_OZONE10121 = 10121;
+export const CHAIN_ID_MOVA10323 = 10323;
+export const CHAIN_ID_KUDORA12000 = 12000;
+export const CHAIN_ID_ELA12343 = 12343;
+export const CHAIN_ID_LIBERLAND_TESTNET12865 = 12865;
+export const CHAIN_ID_BRIDGELESS13441 = 13441;
+export const CHAIN_ID_INTUITION_TESTNET13579 = 13579;
+export const CHAIN_ID_SONIC_TESTNET14601 = 14601;
+export const CHAIN_ID_QUAIT15000 = 15000;
+export const CHAIN_ID_0G_GALILEO16601 = 16601;
+export const CHAIN_ID_0G16661 = 16661;
+export const CHAIN_ID_INCENTIV24101 = 24101;
+export const CHAIN_ID_TCENT28802 = 28802;
+export const CHAIN_ID_PAIX32380 = 32380;
+export const CHAIN_ID_ZIL32769 = 32769;
+export const CHAIN_ID_ZIL_TESTNET33101 = 33101;
+export const CHAIN_ID_ZQ2_DEVNET33469 = 33469;
+export const CHAIN_ID_ABCORE36888 = 36888;
+export const CHAIN_ID_WEICHAIN37771 = 37771;
+export const CHAIN_ID_ROOT_V_X41295 = 41295;
+export const CHAIN_ID_RISA51014 = 51014;
+export const CHAIN_ID_LAZAI52924 = 52924;
+export const CHAIN_ID_MOVA61900 = 61900;
+export const CHAIN_ID_OMACHAIN_TESTNET66238 = 66238;
+export const CHAIN_ID_CARRCHAIN76672 = 76672;
+export const CHAIN_ID_ONYX80888 = 80888;
+export const CHAIN_ID_CODEX81224 = 81224;
+export const CHAIN_ID_CHILIZ88888 = 88888;
+export const CHAIN_ID_APAW90025 = 90025;
+export const CHAIN_ID_WATR_TESTNET92870 = 92870;
+export const CHAIN_ID_PEPU97741 = 97741;
+export const CHAIN_ID_CTC102030 = 102030;
+export const CHAIN_ID_CTCTEST102031 = 102031;
+export const CHAIN_ID_CTCDEV102032 = 102032;
+export const CHAIN_ID_MITOSIS124816 = 124816;
+export const CHAIN_ID_FUEL_SEPOLIA129514 = 129514;
+export const CHAIN_ID_ARIA134235 = 134235;
+export const CHAIN_ID_KASPLEX167012 = 167012;
+export const CHAIN_ID_LIT175200 = 175200;
+export const CHAIN_ID_HPP_SEPOLIA181228 = 181228;
+export const CHAIN_ID_GOMCHAIN_MAINNET190278 = 190278;
+export const CHAIN_ID_HPP_MAINNET190415 = 190415;
+export const CHAIN_ID_EADX198724 = 198724;
+export const CHAIN_ID_NOS200024 = 200024;
+export const CHAIN_ID_PROPULENCE_TESTNET202500 = 202500;
+export const CHAIN_ID_AUREXT202506 = 202506;
+export const CHAIN_ID_KASPLEX202555 = 202555;
+export const CHAIN_ID_JU202599 = 202599;
+export const CHAIN_ID_JUCHAIN210000 = 210000;
+export const CHAIN_ID_KLT220312 = 220312;
+export const CHAIN_ID_SIVZ_MAINNET222345 = 222345;
+export const CHAIN_ID_MOCAT222888 = 222888;
+export const CHAIN_ID_CODE_NEKT_MAINNET235235 = 235235;
+export const CHAIN_ID_ULALO_MAINNET237007 = 237007;
+export const CHAIN_ID_KUB259251 = 259251;
+export const CHAIN_ID_T1299792 = 299792;
+export const CHAIN_ID_T1T299892 = 299892;
+export const CHAIN_ID_D_COMM_MAINNET326663 = 326663;
+export const CHAIN_ID_LAX333222 = 333222;
+export const CHAIN_ID_MTX478549 = 478549;
+export const CHAIN_ID_COMMONS510003 = 510003;
+export const CHAIN_ID_TCROSS612044 = 612044;
+export const CHAIN_ID_CROSS612055 = 612055;
+export const CHAIN_ID_GALACTICA613419 = 613419;
+export const CHAIN_ID_MDX648529 = 648529;
+export const CHAIN_ID_PHAROS_TESTNET688688 = 688688;
+export const CHAIN_ID_PHAROS_ATLANTIC688689 = 688689;
+export const CHAIN_ID_GALACTICA_TESTNET843843 = 843843;
+export const CHAIN_ID_HAQQ_TESTETHIQ853211 = 853211;
+export const CHAIN_ID_ROONCHAIN1314520 = 1314520;
+export const CHAIN_ID_XRPLEVM1440000 = 1440000;
+export const CHAIN_ID_ETHEREAL5064014 = 5064014;
+export const CHAIN_ID_LOOT5151706 = 5151706;
+export const CHAIN_ID_JMDT7000700 = 7000700;
+export const CHAIN_ID_VPC8678671 = 8678671;
+export const CHAIN_ID_CELO_SEP11142220 = 11142220;
+export const CHAIN_ID_ROONCHAIN13145201 = 13145201;
+export const CHAIN_ID_ETHEREAL_TESTNET013374202 = 13374202;
+export const CHAIN_ID_SIS13863860 = 13863860;
+export const CHAIN_ID_UNP47382916 = 47382916;
+export const CHAIN_ID_AUT65000000 = 65000000;
+export const CHAIN_ID_AUT_BAKERLOO65010004 = 65010004;
+export const CHAIN_ID_SOVRA65536001 = 65536001;
+export const CHAIN_ID_ISTCHAIN_MAINNET286022981 = 286022981;
+export const CHAIN_ID_DNACHAIN_MAINNET287022981 = 287022981;
+export const CHAIN_ID_SLCCHAIN_MAINNET288022981 = 288022981;
+export const CHAIN_ID_SOPHON_TESTNET531050204 = 531050204;
+export const CHAIN_ID_ZEN845320009 = 845320009;
+export const CHAIN_ID_RARI1380012617 = 1380012617;
+export const CHAIN_ID_LUMIA_BEAM_TESTNET2030232745 = 2030232745;
+export const CHAIN_ID_GXY420420420420 = 420420420420;
 
-export const quai_9: Chain = {
+export const quai9: Chain = {
   "name": "Quai Mainnet",
   "chain": "QUAI",
   "rpc": [
@@ -222,7 +222,7 @@ export const quai_9: Chain = {
   ]
 };
 
-export const flr_14: Chain = {
+export const flr14: Chain = {
   "name": "Flare Mainnet",
   "chain": "FLR",
   "icon": "flare",
@@ -267,7 +267,7 @@ export const flr_14: Chain = {
   ]
 };
 
-export const nomina_166: Chain = {
+export const nomina166: Chain = {
   "name": "Nomina Mainnet",
   "chain": "NOM",
   "icon": "https://raw.githubusercontent.com/omni-network/omni/refs/heads/main/docs/docs/public/nom/logo.png",
@@ -294,7 +294,7 @@ export const nomina_166: Chain = {
   ]
 };
 
-export const watr_mainnet_192: Chain = {
+export const watrMainnet192: Chain = {
   "name": "Watr Mainnet",
   "chain": "WATR",
   "icon": "watr",
@@ -321,7 +321,7 @@ export const watr_mainnet_192: Chain = {
   ]
 };
 
-export const tacchain_239: Chain = {
+export const tacchain239: Chain = {
   "name": "TAC Mainnet",
   "title": "TAC Mainnet",
   "chain": "TAC",
@@ -356,7 +356,7 @@ export const tacchain_239: Chain = {
   ]
 };
 
-export const kss_347: Chain = {
+export const kss347: Chain = {
   "name": "Kross Network Mainnet",
   "chain": "KSS",
   "rpc": [
@@ -391,7 +391,7 @@ export const kss_347: Chain = {
   ]
 };
 
-export const areum_463: Chain = {
+export const areum463: Chain = {
   "name": "Areum Mainnet",
   "chain": "AREUM",
   "rpc": [
@@ -427,7 +427,7 @@ export const areum_463: Chain = {
   ]
 };
 
-export const lcai_504: Chain = {
+export const lcai504: Chain = {
   "name": "LightchainAI Testnet",
   "chain": "LCAI",
   "rpc": [
@@ -462,7 +462,7 @@ export const lcai_504: Chain = {
   ]
 };
 
-export const syndicate_510: Chain = {
+export const syndicate510: Chain = {
   "name": "Syndicate Mainnet",
   "chain": "Syndicate",
   "shortName": "syndicate",
@@ -497,7 +497,7 @@ export const syndicate_510: Chain = {
   ]
 };
 
-export const capy_586: Chain = {
+export const capy586: Chain = {
   "name": "MarketCapy TestNet 1",
   "chain": "CAPY",
   "rpc": [
@@ -529,7 +529,7 @@ export const capy_586: Chain = {
   ]
 };
 
-export const jasmy_681: Chain = {
+export const jasmy681: Chain = {
   "name": "JASMY Chain Testnet",
   "chain": "JASMY",
   "rpc": [
@@ -567,7 +567,7 @@ export const jasmy_681: Chain = {
   ]
 };
 
-export const uniocean_684: Chain = {
+export const uniocean684: Chain = {
   "name": "Uniocean Testnet",
   "chain": "Uniocean",
   "rpc": [
@@ -604,7 +604,7 @@ export const uniocean_684: Chain = {
   ]
 };
 
-export const capx_testnet_756: Chain = {
+export const capxTestnet756: Chain = {
   "name": "CAPX Testnet",
   "chain": "CAPX",
   "rpc": [
@@ -640,7 +640,7 @@ export const capx_testnet_756: Chain = {
   ]
 };
 
-export const capx_757: Chain = {
+export const capx757: Chain = {
   "name": "CAPX",
   "chain": "CAPX",
   "rpc": [
@@ -676,7 +676,7 @@ export const capx_757: Chain = {
   ]
 };
 
-export const binaryholdings_mainnet_836: Chain = {
+export const binaryholdingsMainnet836: Chain = {
   "name": "BinaryHoldings Mainnet",
   "chain": "BnryMainnet",
   "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/BinaryHoldings/Light.png",
@@ -703,7 +703,7 @@ export const binaryholdings_mainnet_836: Chain = {
   ]
 };
 
-export const AMN_870: Chain = {
+export const aMN870: Chain = {
   "name": "Autonomys Mainnet",
   "chain": "autonomys-mainnet",
   "rpc": [
@@ -731,7 +731,7 @@ export const AMN_870: Chain = {
   "explorers": []
 };
 
-export const stable_988: Chain = {
+export const stable988: Chain = {
   "name": "Stable Mainnet",
   "chain": "stable",
   "rpc": [
@@ -765,7 +765,7 @@ export const stable_988: Chain = {
   ]
 };
 
-export const hyper_evm_999: Chain = {
+export const hyperEvm999: Chain = {
   "name": "HyperEVM",
   "chain": "HYPE",
   "icon": "hyperliquid",
@@ -803,7 +803,7 @@ export const hyper_evm_999: Chain = {
   ]
 };
 
-export const bdag_1043: Chain = {
+export const bdag1043: Chain = {
   "name": "Awakening Testnet",
   "chain": "BDAG",
   "icon": "BDAG",
@@ -840,7 +840,7 @@ export const bdag_1043: Chain = {
   "status": "active"
 };
 
-export const realchain_1098: Chain = {
+export const realchain1098: Chain = {
   "name": "RealChain Mainnet",
   "chain": "RealChain",
   "icon": "realchain",
@@ -873,7 +873,7 @@ export const realchain_1098: Chain = {
   ]
 };
 
-export const ecm_1124: Chain = {
+export const ecm1124: Chain = {
   "name": "ECM Chain Testnet",
   "chain": "ECM Chain",
   "rpc": [
@@ -910,7 +910,7 @@ export const ecm_1124: Chain = {
   ]
 };
 
-export const taker_1125: Chain = {
+export const taker1125: Chain = {
   "name": "Taker Chain Mainnet",
   "chain": "Taker",
   "rpc": [
@@ -945,7 +945,7 @@ export const taker_1125: Chain = {
   ]
 };
 
-export const intuition_mainnet_1155: Chain = {
+export const intuitionMainnet1155: Chain = {
   "name": "Intuition Mainnet",
   "chain": "INTUITION",
   "rpc": [
@@ -986,7 +986,7 @@ export const intuition_mainnet_1155: Chain = {
   "testnet": false
 };
 
-export const fitochain_1233: Chain = {
+export const fitochain1233: Chain = {
   "name": "Fitochain",
   "chain": "FITO",
   "rpc": [
@@ -1020,7 +1020,7 @@ export const fitochain_1233: Chain = {
   ]
 };
 
-export const vfl_1408: Chain = {
+export const vfl1408: Chain = {
   "name": "VFlow",
   "chain": "VFL",
   "rpc": [
@@ -1053,7 +1053,7 @@ export const vfl_1408: Chain = {
   ]
 };
 
-export const tvfl_1409: Chain = {
+export const tvfl1409: Chain = {
   "name": "VFlow Volta Testnet",
   "chain": "TVFL",
   "rpc": [
@@ -1086,7 +1086,7 @@ export const tvfl_1409: Chain = {
   ]
 };
 
-export const injective_testnet_1439: Chain = {
+export const injectiveTestnet1439: Chain = {
   "name": "Injective Testnet",
   "chain": "Injective",
   "icon": "injective",
@@ -1126,7 +1126,7 @@ export const injective_testnet_1439: Chain = {
   ]
 };
 
-export const TREX_1628: Chain = {
+export const tREX1628: Chain = {
   "name": "T-Rex",
   "chain": "T-Rex",
   "rpc": [
@@ -1152,7 +1152,7 @@ export const TREX_1628: Chain = {
   ]
 };
 
-export const injective_1776: Chain = {
+export const injective1776: Chain = {
   "name": "Injective",
   "chain": "Injective",
   "icon": "injective",
@@ -1192,7 +1192,7 @@ export const injective_1776: Chain = {
   ]
 };
 
-export const epix_1916: Chain = {
+export const epix1916: Chain = {
   "name": "Epix",
   "chain": "EPIX",
   "rpc": [
@@ -1228,7 +1228,7 @@ export const epix_1916: Chain = {
   ]
 };
 
-export const QIEV3_1990: Chain = {
+export const qIEV31990: Chain = {
   "name": "QIEMainnet",
   "chain": "QIEV3",
   "rpc": [
@@ -1262,7 +1262,7 @@ export const QIEV3_1990: Chain = {
   ]
 };
 
-export const ronin_2020: Chain = {
+export const ronin2020: Chain = {
   "name": "Ronin",
   "chain": "RON",
   "icon": "ronin",
@@ -1300,7 +1300,7 @@ export const ronin_2020: Chain = {
   ]
 };
 
-export const erol_2027: Chain = {
+export const erol2027: Chain = {
   "name": "Martian Chain",
   "chain": "EROL",
   "rpc": [
@@ -1352,7 +1352,7 @@ export const erol_2027: Chain = {
   ]
 };
 
-export const realchaintest_2098: Chain = {
+export const realchaintest2098: Chain = {
   "name": "RealChain Testnet",
   "chain": "RealChainTest",
   "icon": "realchain",
@@ -1385,7 +1385,7 @@ export const realchaintest_2098: Chain = {
   ]
 };
 
-export const IBVM_2105: Chain = {
+export const iBVM2105: Chain = {
   "name": "IBVM Mainnet",
   "chain": "IBVM Mainnet",
   "icon": "ibvm",
@@ -1411,7 +1411,7 @@ export const IBVM_2105: Chain = {
   "status": "active"
 };
 
-export const IBVMT_2107: Chain = {
+export const iBVMT2107: Chain = {
   "name": "IBVM Testnet",
   "chain": "IBVM Testnet",
   "icon": "ibvmtest",
@@ -1440,7 +1440,7 @@ export const IBVMT_2107: Chain = {
   "status": "active"
 };
 
-export const stable_2201: Chain = {
+export const stable2201: Chain = {
   "name": "Stable Testnet",
   "chain": "stabletestnet_2201-1",
   "rpc": [
@@ -1473,7 +1473,7 @@ export const stable_2201: Chain = {
   ]
 };
 
-export const moca_2288: Chain = {
+export const moca2288: Chain = {
   "name": "Moca Chain Mainnet",
   "chain": "Moca Chain",
   "rpc": [
@@ -1510,7 +1510,7 @@ export const moca_2288: Chain = {
   ]
 };
 
-export const besc_2372: Chain = {
+export const besc2372: Chain = {
   "name": "BESC HYPERCHAIN",
   "chain": "BESC",
   "rpc": [
@@ -1546,7 +1546,7 @@ export const besc_2372: Chain = {
   ]
 };
 
-export const spld_2691: Chain = {
+export const spld2691: Chain = {
   "name": "Splendor Mainnet",
   "chain": "SPLENDOR",
   "rpc": [
@@ -1578,7 +1578,7 @@ export const spld_2691: Chain = {
   ]
 };
 
-export const spldt_2692: Chain = {
+export const spldt2692: Chain = {
   "name": "Splendor Testnet",
   "chain": "SPLD-TESTNET",
   "rpc": [
@@ -1610,7 +1610,7 @@ export const spldt_2692: Chain = {
   ]
 };
 
-export const alpen_2892: Chain = {
+export const alpen2892: Chain = {
   "name": "Alpen Testnet",
   "chain": "Alpen",
   "rpc": [
@@ -1647,7 +1647,7 @@ export const alpen_2892: Chain = {
   ]
 };
 
-export const svm_3109: Chain = {
+export const svm3109: Chain = {
   "name": "SatoshiVM",
   "chain": "BTC",
   "icon": "satoshivm",
@@ -1680,7 +1680,7 @@ export const svm_3109: Chain = {
   ]
 };
 
-export const haust_network_3864: Chain = {
+export const haustNetwork3864: Chain = {
   "name": "Haust Network",
   "chain": "HAUST",
   "icon": "https://ipfs.io/ipfs/QmXVnvLrEEj9Nev2r67Z1tRc1jLDeqC3y95thAkEiCyjwb",
@@ -1724,7 +1724,7 @@ export const haust_network_3864: Chain = {
   }
 };
 
-export const gan_4048: Chain = {
+export const gan4048: Chain = {
   "name": "GANchain L1",
   "chain": "GAN",
   "rpc": [
@@ -1759,7 +1759,7 @@ export const gan_4048: Chain = {
   ]
 };
 
-export const hashfire_4227: Chain = {
+export const hashfire4227: Chain = {
   "name": "Hashfire Testnet",
   "chain": "Hashfire Testnet",
   "icon": "hashfire",
@@ -1793,7 +1793,7 @@ export const hashfire_4227: Chain = {
   ]
 };
 
-export const SC_4509: Chain = {
+export const sC4509: Chain = {
   "name": "Studio Chain",
   "chain": "SC",
   "rpc": [
@@ -1828,7 +1828,7 @@ export const SC_4509: Chain = {
   ]
 };
 
-export const prodao_4936: Chain = {
+export const prodao4936: Chain = {
   "name": "Prodao Mainnet",
   "chain": "PROD",
   "rpc": [
@@ -1854,7 +1854,7 @@ export const prodao_4936: Chain = {
   ]
 };
 
-export const Somnia_5031: Chain = {
+export const somnia5031: Chain = {
   "name": "Somnia Mainnet",
   "chain": "SOMNIA",
   "rpc": [
@@ -1890,7 +1890,7 @@ export const Somnia_5031: Chain = {
   ]
 };
 
-export const mocat_5151: Chain = {
+export const mocat5151: Chain = {
   "name": "Moca Chain Devnet",
   "chain": "Moca Chain",
   "rpc": [
@@ -1927,7 +1927,7 @@ export const mocat_5151: Chain = {
   ]
 };
 
-export const YeYing_5432: Chain = {
+export const yeYing5432: Chain = {
   "name": "YeYing Network",
   "chain": "YeYing",
   "rpc": [
@@ -1962,7 +1962,7 @@ export const YeYing_5432: Chain = {
   ]
 };
 
-export const dukong_5887: Chain = {
+export const dukong5887: Chain = {
   "name": "MANTRACHAIN Testnet",
   "chain": "Dukong",
   "icon": "om",
@@ -1992,7 +1992,7 @@ export const dukong_5887: Chain = {
   ]
 };
 
-export const Growfitter_mainnet_7084: Chain = {
+export const growfitterMainnet7084: Chain = {
   "name": "Growfitter Mainnet",
   "chain": "Growfitter",
   "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/GrowFitter/Light.png",
@@ -2019,7 +2019,7 @@ export const Growfitter_mainnet_7084: Chain = {
   ]
 };
 
-export const vrcn_7131: Chain = {
+export const vrcn7131: Chain = {
   "name": "VRCN Chain Mainnet",
   "chain": "VRCN",
   "icon": "VRCNChain",
@@ -2060,7 +2060,7 @@ export const vrcn_7131: Chain = {
   ]
 };
 
-export const carrchain_7667: Chain = {
+export const carrchain7667: Chain = {
   "name": "CarrChain Mainnet",
   "chain": "CARR",
   "rpc": [
@@ -2095,7 +2095,7 @@ export const carrchain_7667: Chain = {
   ]
 };
 
-export const ptb_7820: Chain = {
+export const ptb7820: Chain = {
   "name": "Portal-To-Bitcoin Mainnet",
   "chain": "PTB",
   "rpc": [
@@ -2130,7 +2130,7 @@ export const ptb_7820: Chain = {
   ]
 };
 
-export const pcn_7890: Chain = {
+export const pcn7890: Chain = {
   "name": "Panchain Mainnet",
   "chain": "PC",
   "rpc": [
@@ -2164,7 +2164,7 @@ export const pcn_7890: Chain = {
   ]
 };
 
-export const bmn_8006: Chain = {
+export const bmn8006: Chain = {
   "name": "BMN Smart Chain",
   "chain": "BMN",
   "rpc": [
@@ -2199,7 +2199,7 @@ export const bmn_8006: Chain = {
   ]
 };
 
-export const lerax_8125: Chain = {
+export const lerax8125: Chain = {
   "name": "Lerax Chain Testnet",
   "chain": "LERAX",
   "rpc": [
@@ -2231,7 +2231,7 @@ export const lerax_8125: Chain = {
   ]
 };
 
-export const svm_testnet_8163: Chain = {
+export const svmTestnet8163: Chain = {
   "name": "Steem Virtual Machine Testnet",
   "chain": "SVM",
   "rpc": [
@@ -2265,7 +2265,7 @@ export const svm_testnet_8163: Chain = {
   ]
 };
 
-export const forknet_8338: Chain = {
+export const forknet8338: Chain = {
   "name": "Forknet",
   "chain": "Forknet",
   "rpc": [
@@ -2299,7 +2299,7 @@ export const forknet_8338: Chain = {
   ]
 };
 
-export const ACN_8700: Chain = {
+export const aCN8700: Chain = {
   "name": "Autonomys Chronos Testnet",
   "title": "Autonomys Chronos Testnet",
   "chain": "Autonomys EVM Chronos",
@@ -2329,7 +2329,7 @@ export const ACN_8700: Chain = {
   ]
 };
 
-export const ebc_8721: Chain = {
+export const ebc8721: Chain = {
   "name": "EB-Chain",
   "chain": "EBC",
   "rpc": [
@@ -2364,7 +2364,7 @@ export const ebc_8721: Chain = {
   ]
 };
 
-export const ward_8765: Chain = {
+export const ward8765: Chain = {
   "name": "Warden",
   "chain": "WARD",
   "icon": "warden",
@@ -2389,7 +2389,7 @@ export const ward_8765: Chain = {
   ]
 };
 
-export const TICS_9030: Chain = {
+export const tICS9030: Chain = {
   "name": "Qubetics Mainnet",
   "chain": "QUBETICS",
   "rpc": [
@@ -2422,7 +2422,7 @@ export const TICS_9030: Chain = {
   ]
 };
 
-export const kub_9601: Chain = {
+export const kub9601: Chain = {
   "name": "KUB Layer 2 Mainnet",
   "chain": "KUB",
   "rpc": [
@@ -2454,7 +2454,7 @@ export const kub_9601: Chain = {
   ]
 };
 
-export const plasma_9745: Chain = {
+export const plasma9745: Chain = {
   "name": "Plasma Mainnet",
   "chain": "Plasma",
   "rpc": [
@@ -2480,7 +2480,7 @@ export const plasma_9745: Chain = {
   ]
 };
 
-export const plasma_testnet_9746: Chain = {
+export const plasmaTestnet9746: Chain = {
   "name": "Plasma Testnet",
   "chain": "Plasma",
   "rpc": [
@@ -2507,7 +2507,7 @@ export const plasma_testnet_9746: Chain = {
   "testnet": true
 };
 
-export const plasma_devnet_9747: Chain = {
+export const plasmaDevnet9747: Chain = {
   "name": "Plasma Devnet",
   "chain": "Plasma",
   "rpc": [
@@ -2528,7 +2528,7 @@ export const plasma_devnet_9747: Chain = {
   "testnet": true
 };
 
-export const ethw_10001: Chain = {
+export const ethw10001: Chain = {
   "name": "ETHW-mainnet",
   "chain": "ETHW",
   "icon": "ethpow",
@@ -2558,7 +2558,7 @@ export const ethw_10001: Chain = {
   ]
 };
 
-export const GateLayer_10088: Chain = {
+export const gateLayer10088: Chain = {
   "name": "Gate Layer",
   "chain": "GT",
   "rpc": [
@@ -2601,7 +2601,7 @@ export const GateLayer_10088: Chain = {
   }
 };
 
-export const ozone_10120: Chain = {
+export const ozone10120: Chain = {
   "name": "Ozone Testnet",
   "chain": "OZONE",
   "icon": "ozone",
@@ -2634,7 +2634,7 @@ export const ozone_10120: Chain = {
   ]
 };
 
-export const ozone_10121: Chain = {
+export const ozone10121: Chain = {
   "name": "Ozone Mainnet",
   "chain": "OZONE",
   "icon": "ozone",
@@ -2667,7 +2667,7 @@ export const ozone_10121: Chain = {
   ]
 };
 
-export const mova_10323: Chain = {
+export const mova10323: Chain = {
   "name": "Mova Beta",
   "chain": "MOVA",
   "rpc": [
@@ -2695,7 +2695,7 @@ export const mova_10323: Chain = {
   ]
 };
 
-export const kudora_12000: Chain = {
+export const kudora12000: Chain = {
   "name": "Kudora Mainnet",
   "chain": "KUD",
   "icon": "kudora",
@@ -2728,7 +2728,7 @@ export const kudora_12000: Chain = {
   ]
 };
 
-export const ela_12343: Chain = {
+export const ela12343: Chain = {
   "name": "ECO Mainnet",
   "chain": "ECO",
   "icon": "ela",
@@ -2758,7 +2758,7 @@ export const ela_12343: Chain = {
   ]
 };
 
-export const liberland_testnet_12865: Chain = {
+export const liberlandTestnet12865: Chain = {
   "name": "Liberland testnet",
   "chain": "LLT",
   "rpc": [
@@ -2786,7 +2786,7 @@ export const liberland_testnet_12865: Chain = {
   "explorers": []
 };
 
-export const bridgeless_13441: Chain = {
+export const bridgeless13441: Chain = {
   "name": "Bridgeless Mainnet",
   "chain": "BRIDGELESS",
   "rpc": [
@@ -2818,7 +2818,7 @@ export const bridgeless_13441: Chain = {
   ]
 };
 
-export const intuition_testnet_13579: Chain = {
+export const intuitionTestnet13579: Chain = {
   "name": "Intuition Testnet",
   "chain": "INTUITION",
   "rpc": [
@@ -2854,7 +2854,7 @@ export const intuition_testnet_13579: Chain = {
   "testnet": true
 };
 
-export const sonic_testnet_14601: Chain = {
+export const sonicTestnet14601: Chain = {
   "name": "Sonic Testnet",
   "chain": "sonic-testnet",
   "rpc": [
@@ -2888,7 +2888,7 @@ export const sonic_testnet_14601: Chain = {
   ]
 };
 
-export const quait_15000: Chain = {
+export const quait15000: Chain = {
   "name": "Quai Orchard Testnet",
   "chain": "QUAI",
   "rpc": [
@@ -2922,7 +2922,7 @@ export const quait_15000: Chain = {
   ]
 };
 
-export const _0g_galileo_16601: Chain = {
+export const _0gGalileo16601: Chain = {
   "name": "0G-Galileo-Testnet",
   "chain": "0G",
   "rpc": [
@@ -2958,7 +2958,7 @@ export const _0g_galileo_16601: Chain = {
   ]
 };
 
-export const _0g_16661: Chain = {
+export const _0g16661: Chain = {
   "name": "0G Mainnet",
   "chain": "0G",
   "rpc": [
@@ -2992,7 +2992,7 @@ export const _0g_16661: Chain = {
   ]
 };
 
-export const incentiv_24101: Chain = {
+export const incentiv24101: Chain = {
   "name": "Incentiv",
   "chain": "Incentiv",
   "rpc": [
@@ -3028,7 +3028,7 @@ export const incentiv_24101: Chain = {
   ]
 };
 
-export const tcent_28802: Chain = {
+export const tcent28802: Chain = {
   "name": "Incentiv Testnet",
   "chain": "TCENT",
   "rpc": [
@@ -3063,7 +3063,7 @@ export const tcent_28802: Chain = {
   ]
 };
 
-export const paix_32380: Chain = {
+export const paix32380: Chain = {
   "name": "PAIX Development Network",
   "chain": "PAIX",
   "rpc": [
@@ -3098,7 +3098,7 @@ export const paix_32380: Chain = {
   ]
 };
 
-export const zil_32769: Chain = {
+export const zil32769: Chain = {
   "name": "Zilliqa 2",
   "chain": "ZIL",
   "rpc": [
@@ -3129,7 +3129,7 @@ export const zil_32769: Chain = {
   ]
 };
 
-export const zil_testnet_33101: Chain = {
+export const zilTestnet33101: Chain = {
   "name": "Zilliqa 2 Testnet",
   "chain": "ZIL",
   "rpc": [
@@ -3162,7 +3162,7 @@ export const zil_testnet_33101: Chain = {
   ]
 };
 
-export const zq2_devnet_33469: Chain = {
+export const zq2Devnet33469: Chain = {
   "name": "Zilliqa 2 Devnet",
   "chain": "ZIL",
   "rpc": [
@@ -3195,7 +3195,7 @@ export const zq2_devnet_33469: Chain = {
   ]
 };
 
-export const abcore_36888: Chain = {
+export const abcore36888: Chain = {
   "name": "AB Core Mainnet",
   "chain": "AB",
   "rpc": [
@@ -3227,7 +3227,7 @@ export const abcore_36888: Chain = {
   ]
 };
 
-export const weichain_37771: Chain = {
+export const weichain37771: Chain = {
   "name": "Weichain net",
   "chain": "Weichain",
   "rpc": [
@@ -3262,7 +3262,7 @@ export const weichain_37771: Chain = {
   ]
 };
 
-export const rootVX_41295: Chain = {
+export const rootVX41295: Chain = {
   "name": "rootVX testnet",
   "chain": "rootVX",
   "rpc": [
@@ -3297,7 +3297,7 @@ export const rootVX_41295: Chain = {
   ]
 };
 
-export const risa_51014: Chain = {
+export const risa51014: Chain = {
   "name": "Risa Testnet",
   "chain": "Risa Testnet",
   "shortName": "risa",
@@ -3332,7 +3332,7 @@ export const risa_51014: Chain = {
   ]
 };
 
-export const lazai_52924: Chain = {
+export const lazai52924: Chain = {
   "name": "LazAI Mainnet",
   "chain": "LazAI",
   "rpc": [
@@ -3368,7 +3368,7 @@ export const lazai_52924: Chain = {
   ]
 };
 
-export const mova_61900: Chain = {
+export const mova61900: Chain = {
   "name": "Mova Mainnet",
   "chain": "MOVA",
   "rpc": [
@@ -3394,7 +3394,7 @@ export const mova_61900: Chain = {
   ]
 };
 
-export const omachain_testnet_66238: Chain = {
+export const omachainTestnet66238: Chain = {
   "name": "OMAChain Testnet",
   "chain": "OMAChain",
   "rpc": [
@@ -3421,7 +3421,7 @@ export const omachain_testnet_66238: Chain = {
   ]
 };
 
-export const carrchain_76672: Chain = {
+export const carrchain76672: Chain = {
   "name": "CarrChain Testnet",
   "chain": "CARR",
   "rpc": [
@@ -3458,7 +3458,7 @@ export const carrchain_76672: Chain = {
   ]
 };
 
-export const onyx_80888: Chain = {
+export const onyx80888: Chain = {
   "name": "Onyx",
   "chain": "onyx",
   "rpc": [
@@ -3493,7 +3493,7 @@ export const onyx_80888: Chain = {
   ]
 };
 
-export const codex_81224: Chain = {
+export const codex81224: Chain = {
   "name": "Codex Mainnet",
   "chain": "CODEX",
   "rpc": [
@@ -3526,7 +3526,7 @@ export const codex_81224: Chain = {
   ]
 };
 
-export const chiliz_88888: Chain = {
+export const chiliz88888: Chain = {
   "name": "Chiliz Chain",
   "chain": "CHZ",
   "icon": "chiliz",
@@ -3566,7 +3566,7 @@ export const chiliz_88888: Chain = {
   ]
 };
 
-export const apaw_90025: Chain = {
+export const apaw90025: Chain = {
   "name": "AIPaw Mainnet",
   "chain": "aipaw",
   "rpc": [
@@ -3591,7 +3591,7 @@ export const apaw_90025: Chain = {
   "explorers": []
 };
 
-export const watr_testnet_92870: Chain = {
+export const watrTestnet92870: Chain = {
   "name": "Watr Testnet",
   "chain": "WATR",
   "icon": "watr",
@@ -3618,7 +3618,7 @@ export const watr_testnet_92870: Chain = {
   ]
 };
 
-export const pepu_97741: Chain = {
+export const pepu97741: Chain = {
   "name": "PEPE Unchained",
   "chain": "PEPU",
   "icon": "pepu",
@@ -3651,7 +3651,7 @@ export const pepu_97741: Chain = {
   ]
 };
 
-export const ctc_102030: Chain = {
+export const ctc102030: Chain = {
   "name": "Creditcoin",
   "chain": "CTC",
   "rpc": [
@@ -3686,7 +3686,7 @@ export const ctc_102030: Chain = {
   ]
 };
 
-export const ctctest_102031: Chain = {
+export const ctctest102031: Chain = {
   "name": "Creditcoin Testnet",
   "chain": "CTC",
   "rpc": [
@@ -3721,7 +3721,7 @@ export const ctctest_102031: Chain = {
   ]
 };
 
-export const ctcdev_102032: Chain = {
+export const ctcdev102032: Chain = {
   "name": "Creditcoin Devnet",
   "chain": "CTC",
   "rpc": [
@@ -3756,7 +3756,7 @@ export const ctcdev_102032: Chain = {
   ]
 };
 
-export const mitosis_124816: Chain = {
+export const mitosis124816: Chain = {
   "name": "Mitosis",
   "chain": "MITO",
   "rpc": [
@@ -3790,7 +3790,7 @@ export const mitosis_124816: Chain = {
   ]
 };
 
-export const fuel_sepolia_129514: Chain = {
+export const fuelSepolia129514: Chain = {
   "name": "Fuel Sepolia Testnet",
   "chain": "ETH",
   "icon": "fuel",
@@ -3835,7 +3835,7 @@ export const fuel_sepolia_129514: Chain = {
   }
 };
 
-export const aria_134235: Chain = {
+export const aria134235: Chain = {
   "name": "ARIA Chain",
   "chain": "ARIA",
   "rpc": [
@@ -3868,7 +3868,7 @@ export const aria_134235: Chain = {
   ]
 };
 
-export const kasplex_167012: Chain = {
+export const kasplex167012: Chain = {
   "name": "Kasplex zkEVM Testnet",
   "chain": "KASPLEX",
   "icon": "kasplex",
@@ -3901,7 +3901,7 @@ export const kasplex_167012: Chain = {
   ]
 };
 
-export const lit_175200: Chain = {
+export const lit175200: Chain = {
   "name": "Lit Chain Mainnet",
   "chain": "LITKEY",
   "rpc": [
@@ -3928,7 +3928,7 @@ export const lit_175200: Chain = {
   ]
 };
 
-export const hpp_sepolia_181228: Chain = {
+export const hppSepolia181228: Chain = {
   "name": "HPP Sepolia",
   "chain": "HPP",
   "rpc": [
@@ -3963,7 +3963,7 @@ export const hpp_sepolia_181228: Chain = {
   ]
 };
 
-export const gomchain_mainnet_190278: Chain = {
+export const gomchainMainnet190278: Chain = {
   "name": "GomChain Mainnet",
   "chain": "GomChain",
   "rpc": [
@@ -3989,7 +3989,7 @@ export const gomchain_mainnet_190278: Chain = {
   ]
 };
 
-export const hpp_mainnet_190415: Chain = {
+export const hppMainnet190415: Chain = {
   "name": "HPP Mainnet",
   "chain": "HPP",
   "rpc": [
@@ -4024,7 +4024,7 @@ export const hpp_mainnet_190415: Chain = {
   ]
 };
 
-export const eadx_198724: Chain = {
+export const eadx198724: Chain = {
   "name": "EADX Network",
   "chain": "EADX",
   "rpc": [
@@ -4054,7 +4054,7 @@ export const eadx_198724: Chain = {
   ]
 };
 
-export const nos_200024: Chain = {
+export const nos200024: Chain = {
   "name": "NitroGraph Testnet",
   "chain": "NOS",
   "rpc": [
@@ -4091,7 +4091,7 @@ export const nos_200024: Chain = {
   ]
 };
 
-export const Propulence_testnet_202500: Chain = {
+export const propulenceTestnet202500: Chain = {
   "name": "Propulence Testnet",
   "chain": "Propulence",
   "rpc": [
@@ -4117,7 +4117,7 @@ export const Propulence_testnet_202500: Chain = {
   ]
 };
 
-export const aurext_202506: Chain = {
+export const aurext202506: Chain = {
   "name": "Aurex Testnet",
   "chain": "AUREX",
   "rpc": [
@@ -4143,7 +4143,7 @@ export const aurext_202506: Chain = {
   ]
 };
 
-export const kasplex_202555: Chain = {
+export const kasplex202555: Chain = {
   "name": "Kasplex zkEVM Mainnet",
   "chain": "KASPLEX",
   "icon": "kasplex",
@@ -4176,7 +4176,7 @@ export const kasplex_202555: Chain = {
   ]
 };
 
-export const ju_202599: Chain = {
+export const ju202599: Chain = {
   "name": "JuChain Testnet",
   "chain": "JU",
   "rpc": [
@@ -4210,7 +4210,7 @@ export const ju_202599: Chain = {
   ]
 };
 
-export const juchain_210000: Chain = {
+export const juchain210000: Chain = {
   "name": "JuChain Mainnet",
   "chain": "JU",
   "rpc": [
@@ -4244,7 +4244,7 @@ export const juchain_210000: Chain = {
   ]
 };
 
-export const klt_220312: Chain = {
+export const klt220312: Chain = {
   "name": "KultChain",
   "chain": "KLT",
   "rpc": [
@@ -4280,7 +4280,7 @@ export const klt_220312: Chain = {
   ]
 };
 
-export const sivz_mainnet_222345: Chain = {
+export const sivzMainnet222345: Chain = {
   "name": "SSHIVANSH Mainnet",
   "chain": "SSHIVANSH",
   "icon": "https://sivz-kyc-data.s3.amazonaws.com/files/6836cca140f7398eae369fba_logo3.png",
@@ -4307,7 +4307,7 @@ export const sivz_mainnet_222345: Chain = {
   ]
 };
 
-export const mocat_222888: Chain = {
+export const mocat222888: Chain = {
   "name": "Moca Chain Testnet",
   "chain": "Moca Chain",
   "rpc": [
@@ -4344,7 +4344,7 @@ export const mocat_222888: Chain = {
   ]
 };
 
-export const CodeNekt_mainnet_235235: Chain = {
+export const codeNektMainnet235235: Chain = {
   "name": "CodeNekt Mainnet",
   "chain": "CodeNekt",
   "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/codenekt/Light.png",
@@ -4371,7 +4371,7 @@ export const CodeNekt_mainnet_235235: Chain = {
   ]
 };
 
-export const ulalo_mainnet_237007: Chain = {
+export const ulaloMainnet237007: Chain = {
   "name": "ULALO Mainnet",
   "chain": "ULALO",
   "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/UOLO/Light.png",
@@ -4398,7 +4398,7 @@ export const ulalo_mainnet_237007: Chain = {
   ]
 };
 
-export const kub_259251: Chain = {
+export const kub259251: Chain = {
   "name": "KUB Layer 2 Testnet",
   "chain": "KUB",
   "rpc": [
@@ -4430,7 +4430,7 @@ export const kub_259251: Chain = {
   ]
 };
 
-export const t1_299792: Chain = {
+export const t1299792: Chain = {
   "name": "t1 Mainnet",
   "chain": "t1",
   "rpc": [
@@ -4465,7 +4465,7 @@ export const t1_299792: Chain = {
   ]
 };
 
-export const t1t_299892: Chain = {
+export const t1t299892: Chain = {
   "name": "t1 Testnet",
   "chain": "t1",
   "rpc": [
@@ -4500,7 +4500,7 @@ export const t1t_299892: Chain = {
   ]
 };
 
-export const DComm_mainnet_326663: Chain = {
+export const dCommMainnet326663: Chain = {
   "name": "DComm Mainnet",
   "chain": "DComm",
   "icon": "https://f005.backblazeb2.com/file/tracehawk-prod/logo/dcomm/Light.png",
@@ -4527,7 +4527,7 @@ export const DComm_mainnet_326663: Chain = {
   ]
 };
 
-export const lax_333222: Chain = {
+export const lax333222: Chain = {
   "name": "Laxaum Testnet",
   "chain": "LXM",
   "rpc": [
@@ -4555,7 +4555,7 @@ export const lax_333222: Chain = {
   ]
 };
 
-export const mtx_478549: Chain = {
+export const mtx478549: Chain = {
   "name": "MintraxChain",
   "chain": "MTX",
   "rpc": [
@@ -4590,7 +4590,7 @@ export const mtx_478549: Chain = {
   ]
 };
 
-export const commons_510003: Chain = {
+export const commons510003: Chain = {
   "name": "Syndicate Commons",
   "chain": "Commons",
   "shortName": "commons",
@@ -4625,7 +4625,7 @@ export const commons_510003: Chain = {
   ]
 };
 
-export const tcross_612044: Chain = {
+export const tcross612044: Chain = {
   "name": "CROSS Testnet",
   "chain": "TCROSS",
   "rpc": [
@@ -4654,7 +4654,7 @@ export const tcross_612044: Chain = {
   ]
 };
 
-export const cross_612055: Chain = {
+export const cross612055: Chain = {
   "name": "CROSS Mainnet",
   "chain": "CROSS",
   "rpc": [
@@ -4683,7 +4683,7 @@ export const cross_612055: Chain = {
   ]
 };
 
-export const galactica_613419: Chain = {
+export const galactica613419: Chain = {
   "name": "Galactica Mainnet",
   "chain": "GNET",
   "rpc": [
@@ -4726,7 +4726,7 @@ export const galactica_613419: Chain = {
   }
 };
 
-export const mdx_648529: Chain = {
+export const mdx648529: Chain = {
   "name": "Modulax Mainnet",
   "chain": "MDX",
   "rpc": [
@@ -4760,7 +4760,7 @@ export const mdx_648529: Chain = {
   ]
 };
 
-export const pharos_testnet_688688: Chain = {
+export const pharosTestnet688688: Chain = {
   "name": "Pharos Testnet",
   "title": "Pharos Testnet",
   "chain": "Pharos",
@@ -4787,7 +4787,7 @@ export const pharos_testnet_688688: Chain = {
   ]
 };
 
-export const pharos_atlantic_688689: Chain = {
+export const pharosAtlantic688689: Chain = {
   "name": "Pharos Atlantic Testnet",
   "title": "Pharos Atlantic Testnet",
   "chain": "Pharos",
@@ -4814,7 +4814,7 @@ export const pharos_atlantic_688689: Chain = {
   ]
 };
 
-export const galactica_testnet_843843: Chain = {
+export const galacticaTestnet843843: Chain = {
   "name": "Galactica Testnet",
   "chain": "GNET",
   "rpc": [
@@ -4851,7 +4851,7 @@ export const galactica_testnet_843843: Chain = {
   ]
 };
 
-export const haqq_testethiq_853211: Chain = {
+export const haqqTestethiq853211: Chain = {
   "name": "HAQQ Testethiq (L2 Sepolia Testnet)",
   "chain": "ETH",
   "rpc": [
@@ -4903,7 +4903,7 @@ export const haqq_testethiq_853211: Chain = {
   }
 };
 
-export const roonchain_1314520: Chain = {
+export const roonchain1314520: Chain = {
   "name": "RoonChain Mainnet",
   "chain": "ROON",
   "icon": "roonchain",
@@ -4938,7 +4938,7 @@ export const roonchain_1314520: Chain = {
   ]
 };
 
-export const xrplevm_1440000: Chain = {
+export const xrplevm1440000: Chain = {
   "name": "XRPL EVM",
   "chain": "XRPL",
   "icon": "xrpl evm",
@@ -4964,7 +4964,7 @@ export const xrplevm_1440000: Chain = {
   ]
 };
 
-export const ethereal_5064014: Chain = {
+export const ethereal5064014: Chain = {
   "name": "Ethereal Mainnet",
   "chain": "Ethereal",
   "rpc": [
@@ -4991,7 +4991,7 @@ export const ethereal_5064014: Chain = {
   ]
 };
 
-export const loot_5151706: Chain = {
+export const loot5151706: Chain = {
   "name": "Loot Mainnet",
   "chain": "LOOT",
   "icon": "loot",
@@ -5025,7 +5025,7 @@ export const loot_5151706: Chain = {
   ]
 };
 
-export const jmdt_7000700: Chain = {
+export const jmdt7000700: Chain = {
   "name": "JMDT Mainnet",
   "chain": "JMDT",
   "rpc": [
@@ -5052,7 +5052,7 @@ export const jmdt_7000700: Chain = {
   ]
 };
 
-export const vpc_8678671: Chain = {
+export const vpc8678671: Chain = {
   "name": "VinaChain Mainnet",
   "chain": "VPC",
   "rpc": [
@@ -5080,7 +5080,7 @@ export const vpc_8678671: Chain = {
   ]
 };
 
-export const celo_sep_11142220: Chain = {
+export const celoSep11142220: Chain = {
   "name": "Celo Sepolia Testnet",
   "chain": "CELO",
   "rpc": [
@@ -5108,7 +5108,7 @@ export const celo_sep_11142220: Chain = {
   "networkId": 11142220
 };
 
-export const roonchain_13145201: Chain = {
+export const roonchain13145201: Chain = {
   "name": "RoonChain Testnet",
   "chain": "ROON",
   "icon": "roonchain",
@@ -5143,7 +5143,7 @@ export const roonchain_13145201: Chain = {
   ]
 };
 
-export const ethereal_testnet_0_13374202: Chain = {
+export const etherealTestnet013374202: Chain = {
   "name": "Ethereal Testnet",
   "title": "Ethereal Testnet",
   "chain": "Ethereal",
@@ -5172,7 +5172,7 @@ export const ethereal_testnet_0_13374202: Chain = {
   ]
 };
 
-export const sis_13863860: Chain = {
+export const sis13863860: Chain = {
   "name": "Symbiosis",
   "chain": "SIS",
   "icon": "symbiosis",
@@ -5205,7 +5205,7 @@ export const sis_13863860: Chain = {
   ]
 };
 
-export const unp_47382916: Chain = {
+export const unp47382916: Chain = {
   "name": "Unipoly Chain Mainnet",
   "chain": "UNP",
   "rpc": [
@@ -5237,7 +5237,7 @@ export const unp_47382916: Chain = {
   ]
 };
 
-export const aut_65000000: Chain = {
+export const aut65000000: Chain = {
   "name": "Autonity Mainnet",
   "chain": "AUT",
   "icon": "aut",
@@ -5267,7 +5267,7 @@ export const aut_65000000: Chain = {
   ]
 };
 
-export const aut_bakerloo_65010004: Chain = {
+export const autBakerloo65010004: Chain = {
   "name": "Autonity Bakerloo (Nile) Testnet",
   "chain": "AUT",
   "icon": "aut",
@@ -5297,7 +5297,7 @@ export const aut_bakerloo_65010004: Chain = {
   ]
 };
 
-export const sovra_65536001: Chain = {
+export const sovra65536001: Chain = {
   "name": "Sovra",
   "chain": "Sovra",
   "rpc": [
@@ -5332,7 +5332,7 @@ export const sovra_65536001: Chain = {
   ]
 };
 
-export const istchain_mainnet_286022981: Chain = {
+export const istchainMainnet286022981: Chain = {
   "name": "ISTChain Mainnet",
   "chain": "Openverse",
   "rpc": [
@@ -5363,7 +5363,7 @@ export const istchain_mainnet_286022981: Chain = {
   ]
 };
 
-export const dnachain_mainnet_287022981: Chain = {
+export const dnachainMainnet287022981: Chain = {
   "name": "DNAChain Mainnet",
   "chain": "Openverse",
   "rpc": [
@@ -5394,7 +5394,7 @@ export const dnachain_mainnet_287022981: Chain = {
   ]
 };
 
-export const slcchain_mainnet_288022981: Chain = {
+export const slcchainMainnet288022981: Chain = {
   "name": "SLCChain Mainnet",
   "chain": "Openverse",
   "rpc": [
@@ -5425,7 +5425,7 @@ export const slcchain_mainnet_288022981: Chain = {
   ]
 };
 
-export const sophon_testnet_531050204: Chain = {
+export const sophonTestnet531050204: Chain = {
   "name": "Sophon zkSync-OS Testnet",
   "chain": "Sophon",
   "rpc": [
@@ -5458,7 +5458,7 @@ export const sophon_testnet_531050204: Chain = {
   ]
 };
 
-export const zen_845320009: Chain = {
+export const zen845320009: Chain = {
   "name": "Horizen Testnet",
   "chain": "ZEN",
   "rpc": [
@@ -5491,7 +5491,7 @@ export const zen_845320009: Chain = {
   ]
 };
 
-export const rari_1380012617: Chain = {
+export const rari1380012617: Chain = {
   "name": "RARI Chain",
   "chain": "RARI",
   "icon": "rari",
@@ -5525,7 +5525,7 @@ export const rari_1380012617: Chain = {
   ]
 };
 
-export const lumia_beam_testnet_2030232745: Chain = {
+export const lumiaBeamTestnet2030232745: Chain = {
   "name": "Lumia Beam Testnet",
   "shortName": "lumia-beam-testnet",
   "title": "Lumia Beam Testnet",
@@ -5572,7 +5572,7 @@ export const lumia_beam_testnet_2030232745: Chain = {
   }
 };
 
-export const gxy_420420420420: Chain = {
+export const gxy420420420420: Chain = {
   "name": "Galaxy Chain",
   "chain": "GALAXY",
   "rpc": [
@@ -5603,169 +5603,169 @@ export const gxy_420420420420: Chain = {
 };
 
 export const allChains: Chain[] = [
-  quai_9,
-  flr_14,
-  nomina_166,
-  watr_mainnet_192,
-  tacchain_239,
-  kss_347,
-  areum_463,
-  lcai_504,
-  syndicate_510,
-  capy_586,
-  jasmy_681,
-  uniocean_684,
-  capx_testnet_756,
-  capx_757,
-  binaryholdings_mainnet_836,
-  AMN_870,
-  stable_988,
-  hyper_evm_999,
-  bdag_1043,
-  realchain_1098,
-  ecm_1124,
-  taker_1125,
-  intuition_mainnet_1155,
-  fitochain_1233,
-  vfl_1408,
-  tvfl_1409,
-  injective_testnet_1439,
-  TREX_1628,
-  injective_1776,
-  epix_1916,
-  QIEV3_1990,
-  ronin_2020,
-  erol_2027,
-  realchaintest_2098,
-  IBVM_2105,
-  IBVMT_2107,
-  stable_2201,
-  moca_2288,
-  besc_2372,
-  spld_2691,
-  spldt_2692,
-  alpen_2892,
-  svm_3109,
-  haust_network_3864,
-  gan_4048,
-  hashfire_4227,
-  SC_4509,
-  prodao_4936,
-  Somnia_5031,
-  mocat_5151,
-  YeYing_5432,
-  dukong_5887,
-  Growfitter_mainnet_7084,
-  vrcn_7131,
-  carrchain_7667,
-  ptb_7820,
-  pcn_7890,
-  bmn_8006,
-  lerax_8125,
-  svm_testnet_8163,
-  forknet_8338,
-  ACN_8700,
-  ebc_8721,
-  ward_8765,
-  TICS_9030,
-  kub_9601,
-  plasma_9745,
-  plasma_testnet_9746,
-  plasma_devnet_9747,
-  ethw_10001,
-  GateLayer_10088,
-  ozone_10120,
-  ozone_10121,
-  mova_10323,
-  kudora_12000,
-  ela_12343,
-  liberland_testnet_12865,
-  bridgeless_13441,
-  intuition_testnet_13579,
-  sonic_testnet_14601,
-  quait_15000,
-  _0g_galileo_16601,
-  _0g_16661,
-  incentiv_24101,
-  tcent_28802,
-  paix_32380,
-  zil_32769,
-  zil_testnet_33101,
-  zq2_devnet_33469,
-  abcore_36888,
-  weichain_37771,
-  rootVX_41295,
-  risa_51014,
-  lazai_52924,
-  mova_61900,
-  omachain_testnet_66238,
-  carrchain_76672,
-  onyx_80888,
-  codex_81224,
-  chiliz_88888,
-  apaw_90025,
-  watr_testnet_92870,
-  pepu_97741,
-  ctc_102030,
-  ctctest_102031,
-  ctcdev_102032,
-  mitosis_124816,
-  fuel_sepolia_129514,
-  aria_134235,
-  kasplex_167012,
-  lit_175200,
-  hpp_sepolia_181228,
-  gomchain_mainnet_190278,
-  hpp_mainnet_190415,
-  eadx_198724,
-  nos_200024,
-  Propulence_testnet_202500,
-  aurext_202506,
-  kasplex_202555,
-  ju_202599,
-  juchain_210000,
-  klt_220312,
-  sivz_mainnet_222345,
-  mocat_222888,
-  CodeNekt_mainnet_235235,
-  ulalo_mainnet_237007,
-  kub_259251,
-  t1_299792,
-  t1t_299892,
-  DComm_mainnet_326663,
-  lax_333222,
-  mtx_478549,
-  commons_510003,
-  tcross_612044,
-  cross_612055,
-  galactica_613419,
-  mdx_648529,
-  pharos_testnet_688688,
-  pharos_atlantic_688689,
-  galactica_testnet_843843,
-  haqq_testethiq_853211,
-  roonchain_1314520,
-  xrplevm_1440000,
-  ethereal_5064014,
-  loot_5151706,
-  jmdt_7000700,
-  vpc_8678671,
-  celo_sep_11142220,
-  roonchain_13145201,
-  ethereal_testnet_0_13374202,
-  sis_13863860,
-  unp_47382916,
-  aut_65000000,
-  aut_bakerloo_65010004,
-  sovra_65536001,
-  istchain_mainnet_286022981,
-  dnachain_mainnet_287022981,
-  slcchain_mainnet_288022981,
-  sophon_testnet_531050204,
-  zen_845320009,
-  rari_1380012617,
-  lumia_beam_testnet_2030232745,
-  gxy_420420420420,
+  quai9,
+  flr14,
+  nomina166,
+  watrMainnet192,
+  tacchain239,
+  kss347,
+  areum463,
+  lcai504,
+  syndicate510,
+  capy586,
+  jasmy681,
+  uniocean684,
+  capxTestnet756,
+  capx757,
+  binaryholdingsMainnet836,
+  aMN870,
+  stable988,
+  hyperEvm999,
+  bdag1043,
+  realchain1098,
+  ecm1124,
+  taker1125,
+  intuitionMainnet1155,
+  fitochain1233,
+  vfl1408,
+  tvfl1409,
+  injectiveTestnet1439,
+  tREX1628,
+  injective1776,
+  epix1916,
+  qIEV31990,
+  ronin2020,
+  erol2027,
+  realchaintest2098,
+  iBVM2105,
+  iBVMT2107,
+  stable2201,
+  moca2288,
+  besc2372,
+  spld2691,
+  spldt2692,
+  alpen2892,
+  svm3109,
+  haustNetwork3864,
+  gan4048,
+  hashfire4227,
+  sC4509,
+  prodao4936,
+  somnia5031,
+  mocat5151,
+  yeYing5432,
+  dukong5887,
+  growfitterMainnet7084,
+  vrcn7131,
+  carrchain7667,
+  ptb7820,
+  pcn7890,
+  bmn8006,
+  lerax8125,
+  svmTestnet8163,
+  forknet8338,
+  aCN8700,
+  ebc8721,
+  ward8765,
+  tICS9030,
+  kub9601,
+  plasma9745,
+  plasmaTestnet9746,
+  plasmaDevnet9747,
+  ethw10001,
+  gateLayer10088,
+  ozone10120,
+  ozone10121,
+  mova10323,
+  kudora12000,
+  ela12343,
+  liberlandTestnet12865,
+  bridgeless13441,
+  intuitionTestnet13579,
+  sonicTestnet14601,
+  quait15000,
+  _0gGalileo16601,
+  _0g16661,
+  incentiv24101,
+  tcent28802,
+  paix32380,
+  zil32769,
+  zilTestnet33101,
+  zq2Devnet33469,
+  abcore36888,
+  weichain37771,
+  rootVX41295,
+  risa51014,
+  lazai52924,
+  mova61900,
+  omachainTestnet66238,
+  carrchain76672,
+  onyx80888,
+  codex81224,
+  chiliz88888,
+  apaw90025,
+  watrTestnet92870,
+  pepu97741,
+  ctc102030,
+  ctctest102031,
+  ctcdev102032,
+  mitosis124816,
+  fuelSepolia129514,
+  aria134235,
+  kasplex167012,
+  lit175200,
+  hppSepolia181228,
+  gomchainMainnet190278,
+  hppMainnet190415,
+  eadx198724,
+  nos200024,
+  propulenceTestnet202500,
+  aurext202506,
+  kasplex202555,
+  ju202599,
+  juchain210000,
+  klt220312,
+  sivzMainnet222345,
+  mocat222888,
+  codeNektMainnet235235,
+  ulaloMainnet237007,
+  kub259251,
+  t1299792,
+  t1t299892,
+  dCommMainnet326663,
+  lax333222,
+  mtx478549,
+  commons510003,
+  tcross612044,
+  cross612055,
+  galactica613419,
+  mdx648529,
+  pharosTestnet688688,
+  pharosAtlantic688689,
+  galacticaTestnet843843,
+  haqqTestethiq853211,
+  roonchain1314520,
+  xrplevm1440000,
+  ethereal5064014,
+  loot5151706,
+  jmdt7000700,
+  vpc8678671,
+  celoSep11142220,
+  roonchain13145201,
+  etherealTestnet013374202,
+  sis13863860,
+  unp47382916,
+  aut65000000,
+  autBakerloo65010004,
+  sovra65536001,
+  istchainMainnet286022981,
+  dnachainMainnet287022981,
+  slcchainMainnet288022981,
+  sophonTestnet531050204,
+  zen845320009,
+  rari1380012617,
+  lumiaBeamTestnet2030232745,
+  gxy420420420420,
 ];
 
 export function getChainById(chainId: number): Chain | undefined {

@@ -223,7 +223,9 @@ function generateTypeScriptCode(chains: ChainData[]): string {
   ts.push("// Chain IDs");
   for (const chain of chains) {
     const constName = sanitizeForTypeScript(chain.shortName || chain.name, chain.chainId);
-    ts.push(`export const CHAIN_ID_${constName.toUpperCase()} = ${chain.chainId};`);
+    // Convert camelCase to SCREAMING_SNAKE_CASE for constant names
+    const constantName = constName.replace(/([A-Z])/g, '_$1').replace(/^_/, '').toUpperCase();
+    ts.push(`export const CHAIN_ID_${constantName} = ${chain.chainId};`);
   }
   ts.push("");
 
@@ -272,17 +274,181 @@ function sanitizeForZig(name: string, chainId?: number): string {
 }
 
 function sanitizeForTypeScript(name: string, chainId?: number): string {
+  // Convert to camelCase
   let sanitized = name
-    .replace(/[^a-zA-Z0-9_]/g, "_")
-    .replace(/^(\d)/, "_$1")
-    .replace(/_+/g, "_");
+    .replace(/[^a-zA-Z0-9]+(.)/g, (_, char) => char.toUpperCase())
+    .replace(/[^a-zA-Z0-9]/g, "")
+    .replace(/^(\d)/, "_$1");
+
+  // Ensure first character is lowercase (camelCase convention)
+  if (sanitized.length > 0 && sanitized[0] !== "_") {
+    sanitized = sanitized[0].toLowerCase() + sanitized.slice(1);
+  }
 
   // Append chain ID to ensure uniqueness
   if (chainId !== undefined) {
-    sanitized = `${sanitized}_${chainId}`;
+    sanitized = `${sanitized}${chainId}`;
   }
 
   return sanitized;
+}
+
+function sanitizeForGo(name: string, chainId?: number): string {
+  // Convert to PascalCase for exported identifiers
+  let sanitized = name
+    .replace(/[^a-zA-Z0-9]+(.)/g, (_, char) => char.toUpperCase())
+    .replace(/[^a-zA-Z0-9]/g, "")
+    .replace(/^(\d)/, "_$1");
+
+  // Ensure first character is uppercase (PascalCase convention)
+  if (sanitized.length > 0 && sanitized[0] !== "_") {
+    sanitized = sanitized[0].toUpperCase() + sanitized.slice(1);
+  }
+
+  // Append chain ID to ensure uniqueness
+  if (chainId !== undefined) {
+    sanitized = `${sanitized}${chainId}`;
+  }
+
+  return sanitized;
+}
+
+function generateGoCode(chains: ChainData[]): string {
+  const go: string[] = [];
+
+  go.push("// This file is auto-generated from DefiLlama/chainlist");
+  go.push("// Do not edit manually - run `bun run generate` to regenerate");
+  go.push("");
+  go.push("package chains");
+  go.push("");
+
+  // Generate types
+  go.push("type NativeCurrency struct {");
+  go.push("\tName     string `json:\"name\"`");
+  go.push("\tSymbol   string `json:\"symbol\"`");
+  go.push("\tDecimals uint8  `json:\"decimals\"`");
+  go.push("}");
+  go.push("");
+
+  go.push("type Explorer struct {");
+  go.push("\tName     string  `json:\"name\"`");
+  go.push("\tURL      string  `json:\"url\"`");
+  go.push("\tStandard *string `json:\"standard,omitempty\"`");
+  go.push("}");
+  go.push("");
+
+  go.push("type Chain struct {");
+  go.push("\tName           string           `json:\"name\"`");
+  go.push("\tChain          string           `json:\"chain\"`");
+  go.push("\tChainID        uint64           `json:\"chainId\"`");
+  go.push("\tNetworkID      uint64           `json:\"networkId\"`");
+  go.push("\tShortName      string           `json:\"shortName\"`");
+  go.push("\tRPC            []string         `json:\"rpc\"`");
+  go.push("\tNativeCurrency NativeCurrency   `json:\"nativeCurrency\"`");
+  go.push("\tInfoURL        *string          `json:\"infoURL,omitempty\"`");
+  go.push("\tExplorers      []Explorer       `json:\"explorers,omitempty\"`");
+  go.push("}");
+  go.push("");
+
+  // Generate chain ID constants
+  go.push("// Chain IDs");
+  go.push("const (");
+  for (const chain of chains) {
+    const constName = sanitizeForGo(chain.shortName || chain.name, chain.chainId);
+    const constantName = constName.replace(/([A-Z])/g, '_$1').replace(/^_/, '').toUpperCase();
+    go.push(`\tChainID${constantName} uint64 = ${chain.chainId}`);
+  }
+  go.push(")");
+  go.push("");
+
+  // Generate chain variables
+  go.push("// Chain constants");
+  for (const chain of chains) {
+    const constName = sanitizeForGo(chain.shortName || chain.name, chain.chainId);
+    go.push(`var ${constName} = Chain{`);
+    go.push(`\tName:      "${escapeString(chain.name)}",`);
+    go.push(`\tChain:     "${escapeString(chain.chain)}",`);
+    go.push(`\tChainID:   ${chain.chainId},`);
+    go.push(`\tNetworkID: ${typeof chain.networkId === 'number' ? chain.networkId : chain.chainId},`);
+    go.push(`\tShortName: "${escapeString(chain.shortName)}",`);
+
+    // RPC array
+    const httpRpcs = chain.rpc.filter(rpc => typeof rpc === "string" && rpc.startsWith("http"));
+    if (httpRpcs.length > 0) {
+      go.push(`\tRPC: []string{`);
+      for (const rpc of httpRpcs) {
+        go.push(`\t\t"${escapeString(rpc as string)}",`);
+      }
+      go.push(`\t},`);
+    } else {
+      go.push(`\tRPC: []string{},`);
+    }
+
+    // Native currency
+    go.push(`\tNativeCurrency: NativeCurrency{`);
+    go.push(`\t\tName:     "${escapeString(chain.nativeCurrency.name)}",`);
+    go.push(`\t\tSymbol:   "${escapeString(chain.nativeCurrency.symbol)}",`);
+    go.push(`\t\tDecimals: ${chain.nativeCurrency.decimals},`);
+    go.push(`\t},`);
+
+    // Info URL
+    if (chain.infoURL) {
+      const infoURL = escapeString(chain.infoURL);
+      go.push(`\tInfoURL: &[]string{"${infoURL}"}[0],`);
+    }
+
+    // Explorers
+    if (chain.explorers && chain.explorers.length > 0) {
+      go.push(`\tExplorers: []Explorer{`);
+      for (const explorer of chain.explorers) {
+        go.push(`\t\t{`);
+        go.push(`\t\t\tName: "${escapeString(explorer.name)}",`);
+        go.push(`\t\t\tURL:  "${escapeString(explorer.url)}",`);
+        if (explorer.standard) {
+          go.push(`\t\t\tStandard: &[]string{"${escapeString(explorer.standard)}"}[0],`);
+        }
+        go.push(`\t\t},`);
+      }
+      go.push(`\t},`);
+    }
+
+    go.push("}");
+    go.push("");
+  }
+
+  // Generate AllChains slice
+  go.push("// AllChains contains all chain configurations");
+  go.push("var AllChains = []Chain{");
+  for (const chain of chains) {
+    const constName = sanitizeForGo(chain.shortName || chain.name, chain.chainId);
+    go.push(`\t${constName},`);
+  }
+  go.push("}");
+  go.push("");
+
+  // Generate lookup function
+  go.push("// GetChainByID returns a chain by its chain ID");
+  go.push("func GetChainByID(chainID uint64) *Chain {");
+  go.push("\tfor i := range AllChains {");
+  go.push("\t\tif AllChains[i].ChainID == chainID {");
+  go.push("\t\t\treturn &AllChains[i]");
+  go.push("\t\t}");
+  go.push("\t}");
+  go.push("\treturn nil");
+  go.push("}");
+  go.push("");
+
+  // Generate chain ID map
+  go.push("// ChainByID is a map of chain ID to Chain");
+  go.push("var ChainByID = func() map[uint64]*Chain {");
+  go.push("\tm := make(map[uint64]*Chain)");
+  go.push("\tfor i := range AllChains {");
+  go.push("\t\tm[AllChains[i].ChainID] = &AllChains[i]");
+  go.push("\t}");
+  go.push("\treturn m");
+  go.push("}()");
+
+  return go.join("\n");
 }
 
 function escapeString(str: string): string {
@@ -305,6 +471,12 @@ async function main() {
   const tsPath = join(import.meta.dir, "../src/chains.ts");
   writeFileSync(tsPath, tsCode);
   console.log(`✓ Generated ${tsPath}`);
+
+  console.log("Generating Go code...");
+  const goCode = generateGoCode(chains);
+  const goPath = join(import.meta.dir, "../src/chains.go");
+  writeFileSync(goPath, goCode);
+  console.log(`✓ Generated ${goPath}`);
 
   console.log("\n✓ Generation complete!");
   console.log(`  Chains: ${chains.length}`);
