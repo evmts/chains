@@ -196,6 +196,7 @@ function generateTypeScriptCode(chains: ChainData[]): string {
   ts.push("  name: string;");
   ts.push("  symbol: string;");
   ts.push("  decimals: number;");
+  ts.push("  [key: string]: any;");
   ts.push("}");
   ts.push("");
 
@@ -203,6 +204,7 @@ function generateTypeScriptCode(chains: ChainData[]): string {
   ts.push("  name: string;");
   ts.push("  url: string;");
   ts.push("  standard?: string;");
+  ts.push("  [key: string]: any;");
   ts.push("}");
   ts.push("");
 
@@ -210,12 +212,13 @@ function generateTypeScriptCode(chains: ChainData[]): string {
   ts.push("  name: string;");
   ts.push("  chain: string;");
   ts.push("  chainId: number;");
-  ts.push("  networkId: number;");
+  ts.push("  networkId?: number;");
   ts.push("  shortName: string;");
   ts.push("  rpc: string[];");
   ts.push("  nativeCurrency: NativeCurrency;");
   ts.push("  infoURL?: string;");
   ts.push("  explorers?: Explorer[];");
+  ts.push("  [key: string]: any;");
   ts.push("}");
   ts.push("");
 

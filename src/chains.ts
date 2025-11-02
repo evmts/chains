@@ -5,24 +5,27 @@ export interface NativeCurrency {
   name: string;
   symbol: string;
   decimals: number;
+  [key: string]: any;
 }
 
 export interface Explorer {
   name: string;
   url: string;
   standard?: string;
+  [key: string]: any;
 }
 
 export interface Chain {
   name: string;
   chain: string;
   chainId: number;
-  networkId: number;
+  networkId?: number;
   shortName: string;
   rpc: string[];
   nativeCurrency: NativeCurrency;
   infoURL?: string;
   explorers?: Explorer[];
+  [key: string]: any;
 }
 
 // Chain IDs
