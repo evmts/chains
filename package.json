@@ -1,5 +1,5 @@
 {
-  "name": "chains",
+  "name": "@tevm/chains",
   "version": "0.0.1",
   "description": "Chain constants generated from DefiLlama/chainlist for both Zig and TypeScript",
   "main": "src/chains.js",
