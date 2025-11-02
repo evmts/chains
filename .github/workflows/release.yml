@@ -75,6 +75,11 @@ jobs:
           fi
           echo "No uncommitted changes detected"
 
+      - name: Publish to npm
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: bun publish --access public
+
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -97,8 +102,3 @@ jobs:
           See the [commit history](https://github.com/${{ github.repository }}/commits/v$VERSION) for details.
 
           🤖 Generated with [GitHub Actions](https://github.com/${{ github.repository }}/actions)"
-
-      - name: Publish to npm
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: bun publish --access public
