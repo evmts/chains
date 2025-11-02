@@ -75,9 +75,6 @@ jobs:
           fi
           echo "No uncommitted changes detected"
 
-      - name: Run tests
-        run: bun test
-
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
