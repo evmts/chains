@@ -1,6 +1,6 @@
 {
   "name": "chains",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Chain constants generated from DefiLlama/chainlist for both Zig and TypeScript",
   "module": "src/chains.ts",
   "type": "module",
