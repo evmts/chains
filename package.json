@@ -1,0 +1,20 @@
+{
+  "name": "chains",
+  "version": "0.1.0",
+  "description": "Chain constants generated from DefiLlama/chainlist for both Zig and TypeScript",
+  "module": "src/chains.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/chains.ts"
+  },
+  "scripts": {
+    "generate": "bun scripts/generate.ts",
+    "build": "bun run generate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
