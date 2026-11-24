@@ -1,194 +1,110 @@
 # chains
 
-Blockchain network constants library for Zig and TypeScript, auto-generated from [DefiLlama/chainlist](https://github.com/DefiLlama/chainlist).
+Chain IDs, RPC URLs, native currencies and explorers from the [DefiLlama Chainlist additional registry](https://github.com/DefiLlama/chainlist/tree/main/constants/additionalChainRegistry), available as TypeScript, Zig and Go constants. Lookups use local data and do not contact RPC endpoints.
 
-## Overview
+## TypeScript and JavaScript
 
-This repository provides a dual-language library that exposes blockchain chain constants generated from the DefiLlama chainlist submodule. The code generation script (`scripts/generate.ts`) parses the chainlist data and outputs type-safe constants for both Zig and TypeScript/JavaScript environments.
-
-## Features
-
-- 🔄 Auto-generated from the official DefiLlama chainlist
-- 🦎 Native Zig support with static type safety
-- 📦 TypeScript/JavaScript support via Bun
-- 🔍 Type-safe chain lookups by ID
-- 📊 163+ blockchain networks with RPC endpoints, native currencies, and explorers
-- 🎯 Constant exports for every chain ID
-
-## Installation
-
-### Prerequisites
-
-- [Bun](https://bun.sh) for TypeScript/JavaScript
-- [Zig](https://ziglang.org) 0.15.x for Zig
-
-### Setup
-
-```bash
-# Clone with submodules
-git clone --recursive <your-repo-url>
-
-# Or if already cloned
-git submodule update --init --recursive
-
-# Install dependencies
-bun install
+```sh
+bun add @tevm/chains
 ```
 
-## Usage
+```ts
+import {
+  CHAIN_ID_FLR14,
+  allChains,
+  chainById,
+  getChainById,
+} from "@tevm/chains";
 
-### TypeScript/JavaScript
-
-```typescript
-import { allChains, getChainById, CHAIN_ID_FLR_14 } from "chains";
-
-// Get all chains
-console.log(`Total chains: ${allChains.length}`);
-
-// Lookup by chain ID
-const flare = getChainById(14);
-console.log(flare?.name); // "Flare Mainnet"
-console.log(flare?.nativeCurrency.symbol); // "FLR"
-
-// Use constants
-console.log(CHAIN_ID_FLR_14); // 14
+const flare = getChainById(CHAIN_ID_FLR14);
+console.log(flare?.nativeCurrency.symbol); // FLR
+console.log(chainById[14]?.name); // Flare Mainnet
+console.log(allChains.length);
 ```
 
-### Zig
+`getChainById` returns `undefined` for an unknown ID. The package ships ESM and TypeScript declarations.
+
+## Zig
+
+Use Zig 0.15.1 or 0.15.2. From a Zig project, fetch a pinned commit from this repository:
+
+```sh
+zig fetch --save=chains https://github.com/evmts/chains/archive/<commit-sha>.tar.gz
+```
+
+Add the dependency in your `build.zig`:
 
 ```zig
-const std = @import("std");
-const chains = @import("chains");
-
-pub fn main() !void {
-    // Get all chains
-    std.debug.print("Total chains: {d}\n", .{chains.all_chains.len});
-
-    // Lookup by chain ID
-    if (chains.getChainById(14)) |chain| {
-        std.debug.print("Name: {s}\n", .{chain.name});
-        std.debug.print("Symbol: {s}\n", .{chain.native_currency.symbol});
-    }
-}
-```
-
-#### Using as a Zig dependency
-
-In your `build.zig.zon`:
-
-```zig
-.{
-    .name = "your-project",
-    .version = "0.1.0",
-    .dependencies = .{
-        .chains = .{
-            .url = "https://github.com/yourusername/chains/archive/<commit-hash>.tar.gz",
-            .hash = "...",
-        },
-    },
-}
-```
-
-In your `build.zig`:
-
-```zig
-const chains_dep = b.dependency("chains", .{
-    .target = target,
-    .optimize = optimize,
-});
+const chains_dep = b.dependency("chains", .{ .target = target, .optimize = optimize });
 exe.root_module.addImport("chains", chains_dep.module("chains"));
 ```
 
+```zig
+const chains = @import("chains");
+const flare = chains.getChainById(chains.chains.CHAIN_ID_FLR_14);
+```
+
+`getChainById` returns `null` for an unknown ID. `chains.all_chains` holds the full registry in chain ID order.
+
+## Go
+
+Use Go 1.23.4 or newer. Install a tagged release or use `@main` for the current `main` snapshot:
+
+```sh
+go get github.com/evmts/chains/src@main
+```
+
+```go
+import "github.com/evmts/chains/src"
+
+flare := chains.GetChainByID(chains.ChainIDFLR14)
+```
+
+`GetChainByID` returns `nil` for an unknown ID. `AllChains` is the ordered registry and `ChainByID` is its ID index.
+
+## Data source and compatibility
+
+[data/chainlist.json](data/chainlist.json) records the source commit and the registry snapshot. [data/compatibility.json](data/compatibility.json) retains records removed since the first release and aliases for renamed constants. Retained records use their historical metadata. The upstream license is included in [LICENSE.chainlist](LICENSE.chainlist).
+
+TypeScript preserves upstream metadata and all RPC URL schemes. Zig and Go expose HTTP and HTTPS RPC URLs and use the chain ID when upstream omits the network ID. The snapshot uses `shortName` when upstream omits `chain` and reads `url` from structured RPC entries. Treat all exported chain records and collections as read-only.
+
 ## Development
 
-### Project Structure
+Install Bun 1.4.1, Zig 0.15.2 and Go 1.23.4. CI uses these versions. The checked-in snapshot makes ordinary builds and generation independent of the current upstream repository.
 
-```
-chains/
-├── src/
-│   ├── chains.ts       # Generated TypeScript constants
-│   ├── chains.zig      # Generated Zig constants
-│   ├── root.zig        # Zig module entry point
-│   └── main.zig        # Zig example executable
-├── scripts/
-│   └── generate.ts     # Code generation script
-├── lib/
-│   └── chainlist/      # Git submodule (DefiLlama/chainlist)
-└── build.zig           # Zig build configuration
-```
-
-### Regenerate Chain Constants
-
-The generation process reads from `lib/chainlist/constants/additionalChainRegistry/` and produces type-safe constants for both languages.
-
-Update the chainlist submodule and regenerate:
-
-```bash
-# Update chainlist data
-git submodule update --remote lib/chainlist
-
-# Regenerate constants
-bun run generate
-```
-
-This will:
-1. Parse all `chainid-*.js` files from the chainlist submodule
-2. Generate `src/chains.zig` with Zig constants and structs
-3. Generate `src/chains.ts` with TypeScript constants and interfaces
-
-### Build
-
-```bash
-# TypeScript
+```sh
+bun install --frozen-lockfile
+bun run lint
+bun run typecheck
+bun run check:generated
 bun run build
-
-# Zig
 zig build
-
-# Run example
-zig build run
+zig fmt --check build.zig build.zig.zon src/*.zig
+go build ./...
+go vet ./...
 ```
 
-### Test
-
-```bash
-# Zig tests
+```sh
+bun run test
+bun run test:property
 zig build test
+go test ./...
+go test ./src -run '^$' -fuzz '^FuzzGetChainByID$' -fuzztime 5s -parallel 2
+bun run test:e2e # Installs and typechecks the packed npm package in a fresh project.
+zig build run    # Runs the Zig example against the public module.
+bun run bench
+zig build bench
+go test ./src -run '^$' -bench '^BenchmarkLookup$' -benchtime 200ms
 ```
 
-## Data Structure
+The benchmarks exercise successful and unsuccessful lookups. CI checks their results and reports timings without machine-specific thresholds.
 
-Each chain includes:
+### Refresh the snapshot
 
-- **name**: Full chain name
-- **chain**: Short identifier
-- **chainId** / **chain_id**: EIP-155 chain ID
-- **networkId** / **network_id**: Network ID
-- **shortName** / **short_name**: Short name
-- **rpc**: Array of RPC endpoints (HTTP/HTTPS URLs)
-- **nativeCurrency** / **native_currency**: Native currency details (name, symbol, decimals)
-- **infoURL** / **info_url**: Chain information URL (optional)
-- **explorers**: Block explorer URLs with names (optional)
+```sh
+bun run update-chainlist <full-DefiLlama-chainlist-commit-sha>
+bun run generate
+bun run check:generated
+```
 
-### Generated Constants
-
-For each chain, the following constants are generated:
-
-**TypeScript:**
-- `CHAIN_ID_<NAME>`: Chain ID constant (e.g., `CHAIN_ID_FLR_14`)
-- `<name>`: Chain object with all data
-- `allChains`: Array of all chains
-- `chainById`: Record mapping chain IDs to chain objects
-- `getChainById(chainId)`: Lookup function
-
-**Zig:**
-- `CHAIN_ID_<NAME>`: Chain ID constant (e.g., `CHAIN_ID_FLR_14`)
-- `<name>`: Chain struct with all data
-- `<name>_rpcs`: RPC endpoints array
-- `<name>_explorers`: Explorers array (if available)
-- `all_chains`: Array of all chains
-- `getChainById(chain_id)`: Lookup function
-
-## License
-
-Chain data sourced from [DefiLlama/chainlist](https://github.com/DefiLlama/chainlist).
+Review the source revision and generated changes together. `generate` rebuilds the TypeScript, JavaScript, declarations, Zig and Go files. `check:generated` reports any differences without modifying those files.

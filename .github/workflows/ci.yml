@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Lint, build and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version-file: package.json
+      - uses: mlugg/setup-zig@d1434d08867e3ee9daa34448df10607b98908d29 # v2
+        with:
+          version: 0.15.2
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version-file: go.mod
+          cache: false
+      - run: bun install --frozen-lockfile
+      - name: Verify generated sources
+        run: bun run check:generated
+      - name: Lint and typecheck
+        run: |
+          bun run lint
+          bun run typecheck
+          zig fmt --check build.zig build.zig.zon src/*.zig
+          test -z "$(gofmt -l src/*.go)"
+          go vet ./...
+      - name: Build
+        run: |
+          bun run build
+          zig build
+          go build ./...
+      - name: Unit and property tests
+        run: |
+          bun run test
+          bun run test:property
+          zig build test
+          go test ./...
+      - name: Fuzz Go lookup
+        run: go test ./src -run '^$' -fuzz '^FuzzGetChainByID$' -fuzztime 5s -parallel 2
+      - name: End-to-end tests
+        run: |
+          bun run test:e2e
+          output=$(zig build run 2>&1)
+          printf '%s\n' "$output"
+          [[ "$output" == *"Name: Flare Mainnet"* ]]
+      - name: Lookup benchmarks
+        run: |
+          bun run bench
+          zig build bench
+          go test ./src -run '^$' -bench '^BenchmarkLookup$' -benchtime 200ms

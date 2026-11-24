@@ -1,0 +1,113 @@
+{
+  "revision": "b0f3bef4c1d94dd1879b70e8f0ee3a4b86fe4b02",
+  "shortNames": {
+    "2201": "stable",
+    "7890": "pcn",
+    "612044": "tcross",
+    "612055": "cross",
+    "531050204": "sophon-testnet"
+  },
+  "chains": [
+    {
+      "name": "Alpen Testnet",
+      "chain": "Alpen",
+      "rpc": [
+        "https://rpc.testnet.alpenlabs.io"
+      ],
+      "faucets": [
+        "https://faucet.testnet.alpenlabs.io/"
+      ],
+      "nativeCurrency": {
+        "name": "Signet BTC",
+        "symbol": "sBTC",
+        "decimals": 8
+      },
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "infoURL": "",
+      "shortName": "alpen",
+      "chainId": 2892,
+      "networkId": 2892,
+      "icon": "https://avatars.githubusercontent.com/u/113091135",
+      "explorers": [
+        {
+          "name": "explorer",
+          "url": "https://explorer.testnet.alpenlabs.io",
+          "icon": "",
+          "standard": ""
+        }
+      ]
+    },
+    {
+      "name": "Steem Virtual Machine Testnet",
+      "chain": "SVM",
+      "rpc": [
+        "https://evmrpc.blazescanner.org"
+      ],
+      "faucets": [],
+      "nativeCurrency": {
+        "name": "STEEM",
+        "symbol": "STEEM",
+        "decimals": 18
+      },
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "infoURL": "https://svmscan.blazeapps.org",
+      "shortName": "svm-testnet",
+      "chainId": 8163,
+      "networkId": 8163,
+      "icon": "steem",
+      "explorers": [
+        {
+          "name": "SVM Scan",
+          "url": "https://svmscan.blazeapps.org",
+          "standard": "EIP3091"
+        }
+      ]
+    },
+    {
+      "name": "Horizen Testnet",
+      "chain": "ZEN",
+      "rpc": [
+        "https://horizen-rpc-testnet.appchain.base.org"
+      ],
+      "faucets": [],
+      "nativeCurrency": {
+        "name": "Ether",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "features": [
+        {
+          "name": "EIP155"
+        },
+        {
+          "name": "EIP1559"
+        }
+      ],
+      "infoURL": "https://www.horizen.io/",
+      "shortName": "zen",
+      "chainId": 845320009,
+      "networkId": 845320009,
+      "explorers": [
+        {
+          "name": "blockscout",
+          "url": "https://horizen-explorer-testnet.appchain.base.org/",
+          "standard": "EIP3091"
+        }
+      ]
+    }
+  ]
+}

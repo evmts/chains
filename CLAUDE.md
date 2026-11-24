@@ -1,19 +1,19 @@
 ---
-description: Code generation project for blockchain chain constants. Uses Bun for TypeScript and Zig for native support.
-globs: "*.ts, *.tsx, *.zig, *.html, *.css, *.js, *.jsx, package.json, build.zig, build.zig.zon"
+description: Code generation project for blockchain chain constants. Uses Bun for TypeScript, plus Zig and Go.
+globs: "*.ts, *.tsx, *.zig, *.html, *.css, *.js, *.jsx, *.go, package.json, build.zig, build.zig.zon"
 alwaysApply: true
 ---
 
 # Chains - Blockchain Constants Library
 
-This project generates blockchain network constants from the DefiLlama chainlist for both Zig and TypeScript.
+This project generates blockchain network constants from the DefiLlama chainlist for Zig, Go and TypeScript.
 
 ## Core Principles
 
 1. **Use Bun for TypeScript** - All TypeScript tooling uses Bun instead of Node.js
 2. **Code Generation** - Chain constants are generated, never manually edited
-3. **Dual Language Support** - Maintain feature parity between Zig and TypeScript
-4. **Type Safety** - Leverage strong typing in both languages
+3. **Language Support** - Maintain lookup parity across Zig, Go and TypeScript
+4. **Type Safety** - Leverage strong typing in each language
 
 ## Development Guidelines
 
@@ -127,63 +127,17 @@ For more information, read the Bun API docs in `node_modules/bun-types/docs/**.m
 
 ## Working with This Project
 
-### Code Generation (`scripts/generate.ts`)
+### Chain Data
 
-The main code generation script:
-- Reads from `lib/chainlist/constants/additionalChainRegistry/chainid-*.js`
-- Parses chain data objects using eval (safe context - static files)
-- Generates `src/chains.zig` with Zig structs and constants
-- Generates `src/chains.ts` with TypeScript interfaces and constants
+- `data/chainlist.json` holds the pinned DefiLlama registry snapshot.
+- `data/compatibility.json` records historical rows and short-name aliases for public exports.
+- `bun run update-chainlist <full-upstream-commit-sha>` downloads and validates static registry data.
+- `bun run generate` produces `src/chains.ts`, `src/chains.js`, `src/chains.d.ts`, `src/chains.zig`, and `src/chains.go`. Edit the generator or input data to change these outputs.
+- `bun run check:generated` verifies the outputs without writing them.
 
-**Key functions:**
-- `loadChainData()`: Loads and parses all chain files from chainlist submodule
-- `generateZigCode()`: Creates Zig module with Chain/NativeCurrency/Explorer structs
-- `generateTypeScriptCode()`: Creates TypeScript module with interfaces and constants
-- `sanitizeForZig()` / `sanitizeForTypeScript()`: Converts chain names to valid identifiers
+### Build and Test
 
-### Generated Files (DO NOT EDIT MANUALLY)
-
-- `src/chains.zig`: Generated Zig constants
-- `src/chains.ts`: Generated TypeScript constants
-
-Always regenerate using `bun run generate` after updating the chainlist submodule.
-
-### Zig Build System
-
-- `build.zig`: Configures the Zig build with module exports and test runners
-- `src/root.zig`: Module entry point that re-exports chains.zig
-- `src/main.zig`: Example executable that demonstrates usage
-- Run with: `zig build run`
-- Test with: `zig build test`
-
-### Git Submodule
-
-The `lib/chainlist` directory is a git submodule pointing to DefiLlama/chainlist:
-- Update: `git submodule update --remote lib/chainlist`
-- After updating, regenerate: `bun run generate`
-
-## Naming Conventions
-
-- **TypeScript**: camelCase for variables, PascalCase for types
-- **Zig**: snake_case for variables/fields, PascalCase for types
-- **Constants**: SCREAMING_SNAKE_CASE in both (e.g., `CHAIN_ID_ETH_1`)
-- **Chain identifiers**: Sanitized from chain shortName + chainId suffix
-
-## Common Tasks
-
-### Add support for a new chain
-1. Ensure it exists in the chainlist submodule
-2. Run `bun run generate`
-3. Test with `bun test` and `zig build test`
-
-### Update chain data
-```bash
-git submodule update --remote lib/chainlist
-bun run generate
-zig build test
-```
-
-### Debug generation issues
-- Check `scripts/generate.ts` parsing logic
-- Verify chainlist file format in `lib/chainlist/constants/additionalChainRegistry/`
-- Use `console.error()` in generate.ts for debugging
+- Bun: `bun run lint`, `bun run typecheck`, `bun run build`, `bun test`.
+- Zig: `zig build`, `zig build test`, `zig build run`.
+- Go: `go vet ./...`, `go build ./...`, `go test ./...`.
+- See the README for package smoke, fuzzing and benchmark commands.
